@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #10182c;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(30, 80, 130, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 80, 130, 0.035) 1px, transparent 1px);
+
+  background-size: 48px 48px;
+}
