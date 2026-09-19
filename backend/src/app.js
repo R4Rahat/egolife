@@ -8,6 +8,8 @@ import errorHandler from './middleware/error.middleware.js';
 
 import adminRoutes from './modules/admin/admin.routes.js';
 import authRoutes from './modules/auth/auth.routes.js';
+import appsRoutes from './modules/apps/apps.routes.js';
+import notificationRoutes from './modules/notification/notification.routes.js';
 
 const app = express();
 
@@ -27,6 +29,10 @@ app.get("/health", (req, res)=>{
 })
 
 app.use("/api/admins", authRoutes);
+
+app.use("/api/apps", appsRoutes);
+
+app.use('/api/notifications', notificationRoutes);
 
 
 
