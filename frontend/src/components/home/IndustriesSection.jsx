@@ -116,7 +116,7 @@ function IndustriesSection() {
           <div className="mb-5 flex items-center justify-center gap-2">
             <span className="h-[6px] w-[6px] rounded-full bg-[#F58220]" />
 
-            <span className="text-[12px] font-semibold uppercase tracking-[4px] text-[#24469A]">
+            <span className="text-[12px] font-semibold uppercase tracking-[4px] text-[#00AEEF]">
               Industries We Serve
             </span>
           </div>
@@ -194,7 +194,7 @@ function IndustriesSection() {
                     w-10
                     items-center
                     justify-center
-                    text-[#24469A]
+                    text-[#00AEEF]
                     transition-transform
                     duration-300
                     group-hover:-translate-y-1
@@ -212,7 +212,7 @@ function IndustriesSection() {
                     text-[#10182C]
                     transition-colors
                     duration-300
-                    group-hover:text-[#24469A]
+                    group-hover:text-[#00AEEF]
                   ">
                   {industry.name}
                 </span>

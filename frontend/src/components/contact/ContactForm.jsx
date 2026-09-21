@@ -2,9 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle2, RefreshCw, MessageSquare } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
+import { getAllStates, getDistrictsByState } from "../../data/statesAndDistricts.js";
 
 const serviceOptions = [
-  "Aadhaar Enrolment Camp / Kit Supply (EA 1507)",
+  "Aadhaar Enrolment Camp / Kit Supply ",
   "AB-PMJAY Ayushman Bharat Project (UTIITSL)",
   "Banking Debt Recovery (DRA Certified - PL, CC, Loans)",
   "Government School Uniform Supply Project",
@@ -25,21 +26,7 @@ const organizationTypes = [
   "Citizen / Individual Contractor",
 ];
 
-const districtOptions = [
-  "Goalpara",
-  "Bongaigaon",
-  "Dhubri",
-  "Baksa",
-  "Udalguri",
-  "Tamulpur",
-  "Barpeta",
-  "Nalbari",
-  "Cachar",
-  "Karimganj",
-  "Hailakandi",
-  "Other Assam District",
-  "Other North-East State / West Bengal",
-];
+const stateOptions = getAllStates() || [];
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -47,6 +34,8 @@ export default function ContactForm() {
     email: "",
     phone: "",
     orgType: "",
+    country: "India",
+    state: "",
     district: "",
     service: "",
     message: "",
@@ -78,6 +67,8 @@ export default function ContactForm() {
       email: "",
       phone: "",
       orgType: "",
+      country: "India",
+      state: "",
       district: "",
       service: "",
       message: "",
@@ -85,12 +76,16 @@ export default function ContactForm() {
     setStatus("idle");
   };
 
+  const currentDistrictOptions = formData.state ? getDistrictsByState(formData.state) : [];
+
   // WhatsApp prefilled message
   const whatsappMessage = encodeURIComponent(
     `Hello eGoLife Governance,\n\nI am contacting you regarding: ${
       formData.service || "General Inquiry"
-    }\nName: ${formData.fullName}\nPhone: ${formData.phone}\nDistrict: ${
-      formData.district || "Assam"
+    }\nName: ${formData.fullName}\nPhone: ${formData.phone}\nState: ${
+      formData.state || "N/A"
+    }\nDistrict: ${
+      formData.district || "N/A"
     }\nOrganization: ${formData.orgType || "N/A"}\nMessage: ${
       formData.message || "Please provide further details."
     }`
@@ -107,7 +102,7 @@ export default function ContactForm() {
             <CheckCircle2 className="w-8 h-8" />
           </div>
 
-          <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#F2F5FB] text-[#24469A]">
+          <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#F2F5FB] text-[#00AEEF]">
             Ref ID: {referenceId}
           </span>
 
@@ -117,7 +112,7 @@ export default function ContactForm() {
 
           <p className="mt-2 text-sm text-[#5B6F84] max-w-md mx-auto leading-relaxed">
             Thank you, <strong className="text-[#10182C]">{formData.fullName}</strong>. Your requirement for{" "}
-            <strong className="text-[#24469A]">{formData.service || "our services"}</strong> has been logged. Our administrative team will respond within 24 business hours.
+            <strong className="text-[#00AEEF]">{formData.service || "our services"}</strong> has been logged. Our administrative team will respond within 24 business hours.
           </p>
 
           {/* Quick WhatsApp Forwarding */}
@@ -166,7 +161,7 @@ export default function ContactForm() {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="e.g. Rahul Das"
-                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] placeholder:text-[#94A3B8] focus:border-[#24469A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#24469A]"
+                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] placeholder:text-[#94A3B8] focus:border-[#00AEEF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00AEEF]"
               />
             </div>
 
@@ -182,7 +177,7 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="e.g. official@domain.gov.in"
-                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] placeholder:text-[#94A3B8] focus:border-[#24469A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#24469A]"
+                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] placeholder:text-[#94A3B8] focus:border-[#00AEEF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00AEEF]"
               />
             </div>
           </div>
@@ -200,7 +195,7 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="e.g. +91 9876543210"
-                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] placeholder:text-[#94A3B8] focus:border-[#24469A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#24469A]"
+                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] placeholder:text-[#94A3B8] focus:border-[#00AEEF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00AEEF]"
               />
             </div>
 
@@ -214,7 +209,7 @@ export default function ContactForm() {
                 required
                 value={formData.orgType}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] focus:border-[#24469A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#24469A]">
+                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] focus:border-[#00AEEF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00AEEF]">
                 <option value="">Select Organization Type</option>
                 {organizationTypes.map((org) => (
                   <option key={org} value={org}>
@@ -225,7 +220,43 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* Country */}
+            <div>
+              <label className="block text-xs font-bold text-[#334155] mb-1.5">
+                Country <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                disabled
+                value="India"
+                className="w-full rounded-xl border border-[#CBD5E1] bg-gray-100 px-3.5 py-2.5 text-xs sm:text-sm text-[#94A3B8] cursor-not-allowed"
+              />
+            </div>
+
+            {/* State */}
+            <div>
+              <label className="block text-xs font-bold text-[#334155] mb-1.5">
+                State <span className="text-red-500">*</span>
+              </label>
+              <select
+                name="state"
+                required
+                value={formData.state}
+                onChange={(e) => {
+                  handleChange(e);
+                  setFormData((prev) => ({ ...prev, district: "" })); // Reset district on state change
+                }}
+                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] focus:border-[#00AEEF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00AEEF]">
+                <option value="">Select State</option>
+                {stateOptions.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+
             {/* District */}
             <div>
               <label className="block text-xs font-bold text-[#334155] mb-1.5">
@@ -234,18 +265,21 @@ export default function ContactForm() {
               <select
                 name="district"
                 required
+                disabled={!formData.state}
                 value={formData.district}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] focus:border-[#24469A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#24469A]">
+                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] focus:border-[#00AEEF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00AEEF] disabled:opacity-50 disabled:cursor-not-allowed">
                 <option value="">Select District</option>
-                {districtOptions.map((d) => (
+                {currentDistrictOptions.map((d) => (
                   <option key={d} value={d}>
                     {d}
                   </option>
                 ))}
               </select>
             </div>
+          </div>
 
+          <div className="grid grid-cols-1 gap-4">
             {/* Service Requirement */}
             <div>
               <label className="block text-xs font-bold text-[#334155] mb-1.5">
@@ -256,7 +290,7 @@ export default function ContactForm() {
                 required
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] focus:border-[#24469A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#24469A]">
+                className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] focus:border-[#00AEEF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00AEEF]">
                 <option value="">Select Required Service</option>
                 {serviceOptions.map((s) => (
                   <option key={s} value={s}>
@@ -279,7 +313,7 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Please describe your proposal, expected camp location or deployment timeline..."
-              className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] placeholder:text-[#94A3B8] focus:border-[#24469A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#24469A]"
+              className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-3.5 py-2.5 text-xs sm:text-sm text-[#10182C] placeholder:text-[#94A3B8] focus:border-[#00AEEF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00AEEF]"
             />
           </div>
 
@@ -288,7 +322,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#24469A] px-6 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#1E3A80] hover:shadow-lg disabled:opacity-70">
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#00AEEF] px-6 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#1E3A80] hover:shadow-lg disabled:opacity-70">
               {status === "submitting" ? (
                 <>
                   <RefreshCw className="w-4 h-4 animate-spin" />

@@ -9,9 +9,9 @@ export default function AboutCTA() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1220px] mx-auto px-6">
-        <div className="relative rounded-3xl bg-gradient-to-br from-[#0D1629] via-[#121E38] to-[#172647] p-8 sm:p-12 md:p-16 text-white overflow-hidden shadow-2xl">
+        <div className="relative rounded-3xl bg-gradient-to-br from-[#E0F2FE] via-[#121E38] to-[#172647] p-8 sm:p-12 md:p-16 text-[#10182C] overflow-hidden shadow-2xl">
           {/* Background Decorative Glows */}
-          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#24469A]/30 blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#00AEEF]/30 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-80 h-80 rounded-full bg-[#F58220]/20 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl">
@@ -20,7 +20,7 @@ export default function AboutCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider text-[#F58220] mb-6">
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-[#7DD3FC]/60 text-xs font-semibold uppercase tracking-wider text-[#00AEEF] mb-6">
               PARTNER WITH EGOLIFE
             </motion.div>
 
@@ -38,7 +38,7 @@ export default function AboutCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="mt-4 text-sm sm:text-base text-[#9BB1C9] leading-relaxed max-w-2xl">
+              className="mt-4 text-sm sm:text-base text-[#4B6179] leading-relaxed max-w-2xl">
               From municipal revenue systems and urban planning portals to enterprise mobile apps,
               our team brings 15+ years of verified public-sector IT expertise to your agency.
             </motion.p>
@@ -52,7 +52,7 @@ export default function AboutCTA() {
               className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#24469A] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                className="inline-flex items-center gap-2 rounded-full bg-[#00AEEF] px-6 py-3 text-sm font-semibold text-[#10182C] transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5">
                 <span>Contact Our Specialists</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -73,17 +73,17 @@ export default function AboutCTA() {
             </motion.div>
 
             {/* Quick Contact Bar */}
-            <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#9BB1C9]">
+            <div className="mt-12 pt-8 border-t border-[#7DD3FC]/50 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#4B6179]">
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#F58220] shrink-0" />
+                <Phone className="w-4 h-4 text-[#00AEEF] shrink-0" />
                 <span>Sales: +91 9044095988 / 77</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#F58220] shrink-0" />
+                <Mail className="w-4 h-4 text-[#00AEEF] shrink-0" />
                 <span>Direct: support@egolife.in</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-[#F58220] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#00AEEF] shrink-0" />
                 <span>Gomti Nagar, Lucknow, UP</span>
               </div>
             </div>

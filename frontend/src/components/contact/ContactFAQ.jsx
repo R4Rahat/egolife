@@ -5,7 +5,7 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 const faqs = [
   {
     q: "How can our Gram Panchayat or School organize an Aadhaar enrolment camp?",
-    a: "Operating in consortium with BNK Capital Markets Ltd as Enrolment Agency (EA code 1507) under GAD Govt. of Assam, we deploy certified operators, biometric kits (Iris and slap scanners), and GPS laptops directly to your premises. Submit the proposal form or message our WhatsApp desk to coordinate camp dates.",
+    a: "Operating in consortium with BNK Capital Markets Ltd as Enrolment Agency (Government Authorized) under Government, we deploy certified operators, biometric kits (Iris and slap scanners), and GPS laptops directly to your premises. Submit the proposal form or message our WhatsApp desk to coordinate camp dates.",
   },
   {
     q: "Which districts are covered under your AB-PMJAY Ayushman Bharat healthcare project?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Can government departments or institutions procure 'Egolife LED' bulbs and school uniforms?",
-    a: "Yes. We manufacture energy-efficient LED bulbs under the registered brand 'Egolife LED' and have extensive experience executing state government school uniform manufacturing and distribution tenders across Assam.",
+    a: "Yes. We manufacture energy-efficient LED bulbs under the registered brand 'Egolife LED' and have extensive experience executing state government school uniform manufacturing and distribution tenders across India.",
   },
   {
     q: "What is the typical response turnaround time for project inquiries?",
@@ -36,7 +36,7 @@ export default function ContactFAQ() {
     <section className="py-16 bg-[#F8FAFC] border-t border-[#EAEEF4]">
       <div className="max-w-[900px] mx-auto px-6">
         <div className="text-center max-w-xl mx-auto mb-10">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#24469A]">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-[#00AEEF]">
             FREQUENTLY ASKED QUESTIONS
           </span>
           <h3 className="text-xl sm:text-2xl font-extrabold text-[#10182C] mt-1">
@@ -55,12 +55,12 @@ export default function ContactFAQ() {
                   onClick={() => toggle(idx)}
                   className="w-full flex items-center justify-between p-4 sm:p-5 text-left transition-colors hover:bg-[#F8FAFC]">
                   <span className="text-xs sm:text-sm font-bold text-[#10182C] flex items-center gap-2.5">
-                    <HelpCircle className="w-4 h-4 text-[#24469A] shrink-0" />
+                    <HelpCircle className="w-4 h-4 text-[#00AEEF] shrink-0" />
                     {faq.q}
                   </span>
                   <ChevronDown
                     className={`w-4 h-4 text-[#64748B] shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-[#24469A]" : ""
+                      isOpen ? "rotate-180 text-[#00AEEF]" : ""
                     }`}
                   />
                 </button>

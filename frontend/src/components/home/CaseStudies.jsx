@@ -14,14 +14,14 @@ import {
 const caseStudies = [
   {
     id: "aadhaar-enrolment",
-    category: "CITIZEN IDENTIFICATION & GAD ASSAM",
+    category: "CITIZEN IDENTIFICATION & ",
     title: "Aadhaar Generation & Biometric Kit Deployment",
-    authority: "GAD Assam | EA Code: 1507",
+    authority: "Government Authorized Agency",
     description:
-      "Operating in consortium with BNK Capital Markets Ltd as Enrolment Agency (EA code 1507). Providing certified operators and biometric kits under Deputy Commissioners of Baksa, Udalguri, Tamulpur, Barpeta, Goalpara, and District Commissioner Nalbari.",
+      "Operating in consortium with BNK Capital Markets Ltd as Enrolment Agency (Government Authorized). Providing certified operators and biometric kits under Deputy Commissioners of Baksa, Udalguri, Tamulpur, Barpeta, Goalpara, and District Commissioner Nalbari.",
     icon: Fingerprint,
     color: "from-blue-600 to-indigo-700",
-    tags: ["EA Code 1507", "6 DC Offices", "Gram Panchayat Camps"],
+    tags: ["Government Authorized", "6 DC Offices", "Gram Panchayat Camps"],
     coverage: "Baksa, Udalguri, Tamulpur, Barpeta, Goalpara, Nalbari",
   },
   {
@@ -42,23 +42,23 @@ const caseStudies = [
     title: "Punjab National Bank Enrolment & Kit Supply",
     authority: "Punjab National Bank | BNK Capital",
     description:
-      "Appointed by BNK Capital Markets Ltd as vendor of manpower and Aadhaar kit supplier stationed across various Punjab National Bank branches throughout Assam for customer KYC and citizen enrolment.",
+      "Appointed by BNK Capital Markets Ltd as vendor of manpower and Aadhaar kit supplier stationed across various Punjab National Bank branches throughout India for customer KYC and citizen enrolment.",
     icon: Building,
     color: "from-sky-600 to-blue-700",
-    tags: ["PNB Assam Branches", "Certified Operators", "Biometric Kits"],
+    tags: ["PNB India Branches", "Certified Operators", "Biometric Kits"],
     coverage: "Statewide Punjab National Bank Branches",
   },
   {
     id: "school-uniforms",
     category: "STATE PUBLIC PROCUREMENT",
     title: "Government School Uniform Manufacturing & Supply",
-    authority: "Dept of School Education, Assam",
+    authority: "Dept of School Education, India",
     description:
-      "Large-scale tailoring, quality inspection, and timely distribution of standardized school uniforms for students enrolled across government schools in different districts of Assam.",
+      "Large-scale tailoring, quality inspection, and timely distribution of standardized school uniforms for students enrolled across government schools in different districts of India.",
     icon: Shirt,
     color: "from-orange-500 to-amber-600",
     tags: ["Institutional Supply", "Statewide Districts", "Quality Certified"],
-    coverage: "Multiple Districts of Assam",
+    coverage: "Multiple Districts of India",
   },
   {
     id: "pan-card-agency",
@@ -82,7 +82,7 @@ const caseStudies = [
     icon: Landmark,
     color: "from-amber-600 to-orange-700",
     tags: ["DRA Certified", "PL, CC & Business Loans", "RBI Adherence"],
-    coverage: "Assam & North-East Region",
+    coverage: "India & Pan India Region",
   },
 ];
 
@@ -114,7 +114,7 @@ export default function CaseStudies() {
             Verified Projects &amp; Public Sector Engagements
           </h2>
           <p className="mt-3 text-[#5A6F87] text-sm sm:text-base">
-            Proven execution across Deputy Commissioners of Assam, UTIITSL, Punjab National Bank, and the Department of School Education.
+            Proven execution across Deputy Commissioners of India, UTIITSL, Punjab National Bank, and the Department of School Education.
           </p>
         </div>
 
@@ -129,22 +129,22 @@ export default function CaseStudies() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
-                className="group flex flex-col justify-between rounded-2xl border border-[#E4EAF2] bg-[#FAFCFF] hover:bg-white p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#24469A]/30 hover:shadow-xl">
+                className="group flex flex-col justify-between rounded-2xl border border-[#E4EAF2] bg-[#FAFCFF] hover:bg-white p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#00AEEF]/30 hover:shadow-xl">
                 <div>
                   {/* Category & Authority */}
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="text-[10px] font-black uppercase tracking-wider text-[#24469A]">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-[#00AEEF]">
                       {item.category}
                     </span>
                     <span className="w-2 h-2 rounded-full bg-[#16A34A] animate-pulse" />
                   </div>
 
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-11 h-11 rounded-xl bg-[#24469A]/10 text-[#24469A] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-11 h-11 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-[#10182C] group-hover:text-[#24469A] transition-colors leading-snug">
+                      <h3 className="text-base font-bold text-[#10182C] group-hover:text-[#00AEEF] transition-colors leading-snug">
                         {item.title}
                       </h3>
                       <p className="text-xs text-[#64748B] font-semibold mt-0.5">
@@ -182,7 +182,7 @@ export default function CaseStudies() {
                   </span>
                   <Link
                     to="/services"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-[#24469A] hover:text-[#1E3A80] transition-colors">
+                    className="inline-flex items-center gap-1 text-xs font-bold text-[#00AEEF] hover:text-[#1E3A80] transition-colors">
                     <span>View Specifications</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>

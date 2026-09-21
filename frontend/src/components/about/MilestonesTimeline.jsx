@@ -45,7 +45,7 @@ export default function MilestonesTimeline() {
     <section className="py-20 bg-[#F8FAFC] border-b border-[#EAEEF4]">
       <div className="max-w-[1220px] mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#24469A]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF]">
             CHRONICLE OF GROWTH
           </p>
           <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#10182C]">
@@ -77,9 +77,9 @@ export default function MilestonesTimeline() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: idx * 0.08 }}
                     className="w-full md:w-[calc(50%-2.5rem)]">
-                    <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs hover:shadow-md hover:border-[#24469A]/30 transition-all">
+                    <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs hover:shadow-md hover:border-[#00AEEF]/30 transition-all">
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="px-2.5 py-1 rounded-md bg-[#24469A]/10 text-[#24469A] text-xs font-extrabold">
+                        <span className="px-2.5 py-1 rounded-md bg-[#00AEEF]/10 text-[#00AEEF] text-xs font-extrabold">
                           {item.year}
                         </span>
                         <h3 className="text-base font-bold text-[#10182C]">{item.title}</h3>
@@ -92,7 +92,7 @@ export default function MilestonesTimeline() {
 
                   {/* Central Node marker */}
                   <div className="my-3 md:my-0 md:absolute md:left-1/2 md:-translate-x-1/2 flex items-center justify-center z-10">
-                    <div className="w-10 h-10 rounded-full bg-white border-2 border-[#24469A] shadow-md flex items-center justify-center text-[#24469A]">
+                    <div className="w-10 h-10 rounded-full bg-white border-2 border-[#00AEEF] shadow-md flex items-center justify-center text-[#00AEEF]">
                       <item.icon className="w-4 h-4" />
                     </div>
                   </div>

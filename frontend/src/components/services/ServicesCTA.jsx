@@ -9,9 +9,9 @@ export default function ServicesCTA() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1220px] mx-auto px-6">
-        <div className="relative rounded-3xl bg-gradient-to-br from-[#0D1629] via-[#121E38] to-[#172647] p-8 sm:p-12 md:p-16 text-white overflow-hidden shadow-2xl">
+        <div className="relative rounded-3xl bg-gradient-to-br from-[#E0F2FE] via-[#121E38] to-[#172647] p-8 sm:p-12 md:p-16 text-[#10182C] overflow-hidden shadow-2xl">
           {/* Background Decorative Glows */}
-          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#24469A]/30 blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#00AEEF]/30 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-80 h-80 rounded-full bg-[#F58220]/20 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl">
@@ -20,7 +20,7 @@ export default function ServicesCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider text-[#F58220] mb-6">
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-[#7DD3FC]/60 text-xs font-semibold uppercase tracking-wider text-[#00AEEF] mb-6">
               INVITING PUBLIC & ENTERPRISE PROPOSALS
             </motion.div>
 
@@ -38,7 +38,7 @@ export default function ServicesCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="mt-4 text-sm sm:text-base text-[#9BB1C9] leading-relaxed max-w-2xl">
+              className="mt-4 text-sm sm:text-base text-[#4B6179] leading-relaxed max-w-2xl">
               We write to you in proposal of Aadhaar generation camps, banking recovery, and government supply projects at your Gram Panchayats, schools, bank branches, and public premises. Let our certified team deliver effective and efficient execution.
             </motion.p>
 
@@ -51,7 +51,7 @@ export default function ServicesCTA() {
               className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#24469A] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                className="inline-flex items-center gap-2 rounded-full bg-[#00AEEF] px-6 py-3 text-sm font-semibold text-[#10182C] transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5">
                 <span>Submit Service Request</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -72,32 +72,32 @@ export default function ServicesCTA() {
             </motion.div>
 
             {/* Direct Official Contact Bar from Document */}
-            <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-5 text-xs text-[#9BB1C9]">
+            <div className="mt-12 pt-8 border-t border-[#7DD3FC]/50 grid grid-cols-1 sm:grid-cols-3 gap-5 text-xs text-[#4B6179]">
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-[#F58220] shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-[#889EBA] block text-[10px] uppercase font-bold">Official Hotline</span>
-                  <a href="tel:+916002172653" className="font-semibold text-white hover:text-[#F58220] transition-colors">
+                  <span className="text-[#4B6179] block text-[10px] uppercase font-bold">Official Hotline</span>
+                  <a href="tel:+916002172653" className="font-semibold text-[#10182C] hover:text-[#00AEEF] transition-colors">
                     +91 6002172653
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-[#F58220] shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-[#889EBA] block text-[10px] uppercase font-bold">Email Correspondence</span>
-                  <a href="mailto:egolifemd@gmail.com" className="font-semibold text-white hover:text-[#F58220] transition-colors">
+                  <span className="text-[#4B6179] block text-[10px] uppercase font-bold">Email Correspondence</span>
+                  <a href="mailto:egolifemd@gmail.com" className="font-semibold text-[#10182C] hover:text-[#00AEEF] transition-colors">
                     egolifemd@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#F58220] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-[#889EBA] block text-[10px] uppercase font-bold">Regd. Office (Assam)</span>
-                  <span className="font-semibold text-white block">
+                  <span className="text-[#4B6179] block text-[10px] uppercase font-bold">Regd. Office (India)</span>
+                  <span className="font-semibold text-[#10182C] block">
                     Paikan Part II, Krishnai, Goalpara – 783126
                   </span>
                 </div>

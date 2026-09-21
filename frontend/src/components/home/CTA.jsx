@@ -12,35 +12,35 @@ export default function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.35 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="relative mx-auto max-w-[900px] overflow-hidden rounded-2xl bg-[#0D1629] p-8 sm:p-12 shadow-2xl text-white">
+        className="relative mx-auto max-w-[900px] overflow-hidden rounded-2xl bg-[#E0F2FE] p-8 sm:p-12 shadow-2xl text-[#10182C]">
         {/* Subtle orange glow */}
         <div className="pointer-events-none absolute -left-24 -top-24 h-[300px] w-[300px] rounded-full bg-[#F58220]/15 blur-[80px]" />
         {/* Subtle blue glow */}
-        <div className="pointer-events-none absolute -right-24 top-0 h-[280px] w-[280px] rounded-full bg-[#24469A]/30 blur-[90px]" />
+        <div className="pointer-events-none absolute -right-24 top-0 h-[280px] w-[280px] rounded-full bg-[#00AEEF]/30 blur-[90px]" />
 
         <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           {/* LEFT CONTENT */}
           <div className="max-w-[500px]">
-            <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#F58220]">
+            <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#00AEEF]">
               SUBMIT A PROJECT PROPOSAL
             </span>
 
-            <h2 className="mt-2 text-2xl sm:text-3xl lg:text-[34px] font-extrabold leading-[1.12] tracking-tight text-white">
+            <h2 className="mt-2 text-2xl sm:text-3xl lg:text-[34px] font-extrabold leading-[1.12] tracking-tight text-[#10182C]">
               Ready to Deploy Verified{" "}
-              <span className="text-[#F58220]">e-Governance</span> or Banking Services?
+              <span className="text-[#00AEEF]">e-Governance</span> or Banking Services?
             </h2>
 
             <p className="mt-4 text-xs sm:text-sm leading-relaxed text-[#B8C4D4]">
               We write to you in proposal of Aadhaar generation camps, banking debt recovery, and government supply projects at your Gram Panchayats, schools, bank branches, and public premises.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-[#9BB1C9]">
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-[#4B6179]">
               <div className="flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-[#F58220]" />
-                <span>Paikan, Goalpara (Assam)</span>
+                <MapPin className="w-3.5 h-3.5 text-[#00AEEF]" />
+                <span>Paikan, Goalpara (India)</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Mail className="w-3.5 h-3.5 text-[#F58220]" />
+                <Mail className="w-3.5 h-3.5 text-[#00AEEF]" />
                 <a href="mailto:egolifemd@gmail.com" className="hover:text-white transition-colors">
                   egolifemd@gmail.com
                 </a>
@@ -71,8 +71,8 @@ export default function CTA() {
               href="tel:+916002172653"
               whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.08)" }}
               whileTap={{ scale: 0.98 }}
-              className="flex h-[42px] items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 text-xs font-semibold text-white transition-all">
-              <Phone size={14} className="text-[#F58220]" />
+              className="flex h-[42px] items-center justify-center gap-2 rounded-xl border border-[#7DD3FC]/60 bg-white/60 px-4 text-xs font-semibold text-[#10182C] transition-all">
+              <Phone size={14} className="text-[#00AEEF]" />
               <span>Call: +91 6002172653</span>
             </motion.a>
           </div>

@@ -34,7 +34,7 @@ export default function CoreValues() {
       <div className="max-w-[1220px] mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#24469A]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF]">
             PURPOSE & PHILOSOPHY
           </p>
           <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#10182C]">
@@ -53,11 +53,11 @@ export default function CoreValues() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-2xl bg-white border border-[#E2E8F0] p-8 relative overflow-hidden shadow-xs hover:border-[#24469A]/30 transition-all">
-            <div className="w-12 h-12 rounded-xl bg-[#24469A]/10 text-[#24469A] flex items-center justify-center mb-6">
+            className="rounded-2xl bg-white border border-[#E2E8F0] p-8 relative overflow-hidden shadow-xs hover:border-[#00AEEF]/30 transition-all">
+            <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center mb-6">
               <Compass className="w-6 h-6" />
             </div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#24469A]">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#00AEEF]">
               OUR VISION
             </span>
             <h3 className="mt-2 text-xl font-bold text-[#10182C]">
@@ -99,17 +99,17 @@ export default function CoreValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: idx * 0.08 }}
-              className="rounded-xl bg-white border border-[#E2E8F0] p-6 flex flex-col justify-between hover:shadow-md hover:border-[#24469A]/30 transition-all group">
+              className="rounded-xl bg-white border border-[#E2E8F0] p-6 flex flex-col justify-between hover:shadow-md hover:border-[#00AEEF]/30 transition-all group">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#F2F5FA] text-[#24469A] flex items-center justify-center group-hover:bg-[#24469A] group-hover:text-white transition-colors duration-200">
+                  <div className="w-10 h-10 rounded-lg bg-[#F2F5FA] text-[#00AEEF] flex items-center justify-center group-hover:bg-[#00AEEF] group-hover:text-white transition-colors duration-200">
                     <val.icon className="w-5 h-5" />
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#F1F5F9] text-[#475569]">
                     {val.badge}
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-[#10182C] group-hover:text-[#24469A] transition-colors">
+                <h4 className="text-base font-bold text-[#10182C] group-hover:text-[#00AEEF] transition-colors">
                   {val.title}
                 </h4>
                 <p className="mt-2 text-xs text-[#5B6F84] leading-relaxed">

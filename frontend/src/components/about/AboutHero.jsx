@@ -7,7 +7,7 @@ export default function AboutHero() {
     <section className="relative overflow-hidden bg-gradient-to-b from-[#F7F9FD] via-white to-white py-16 md:py-24 border-b border-[#EAEEF4]">
       {/* Background Decorative Grids and Glows */}
       <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
-      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#24469A]/6 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#00AEEF]/6 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[350px] h-[250px] bg-[#F58220]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-[1220px] mx-auto px-6">
@@ -17,11 +17,11 @@ export default function AboutHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="flex items-center gap-2 text-xs font-medium text-[#687A90] mb-6">
-          <Link to="/" className="hover:text-[#24469A] transition-colors">
+          <Link to="/" className="hover:text-[#00AEEF] transition-colors">
             Home
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-[#A0AEC0]" />
-          <span className="text-[#24469A] font-semibold">About Us</span>
+          <span className="text-[#00AEEF] font-semibold">About Us</span>
         </motion.div>
 
         {/* Header Content */}
@@ -30,8 +30,8 @@ export default function AboutHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#24469A]/8 border border-[#24469A]/15 text-[#24469A] text-xs font-semibold tracking-wide mb-5">
-            <ShieldCheck className="w-4 h-4 text-[#24469A]" />
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00AEEF]/8 border border-[#00AEEF]/15 text-[#00AEEF] text-xs font-semibold tracking-wide mb-5">
+            <ShieldCheck className="w-4 h-4 text-[#00AEEF]" />
             <span>ESTABLISHED 2011 • GOVERNANCE & DIGITAL INNOVATION</span>
           </motion.div>
 
@@ -41,7 +41,7 @@ export default function AboutHero() {
             transition={{ duration: 0.55, delay: 0.15 }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#10182C] tracking-tight leading-[1.15]">
             Empowering Public Governance Through{" "}
-            <span className="bg-gradient-to-r from-[#24469A] via-[#1E60B8] to-[#F58220] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00AEEF] via-[#38BDF8] to-[#F58220] bg-clip-text text-transparent">
               Scalable Digital Technology
             </span>
           </motion.h1>
@@ -64,7 +64,7 @@ export default function AboutHero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-8 border-t border-[#E8EEF5]">
           <div className="flex items-start gap-3.5 p-4 rounded-xl bg-white border border-[#E4EAF2] shadow-xs">
-            <div className="w-10 h-10 rounded-lg bg-[#24469A]/10 text-[#24469A] flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-lg bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0">
               <Award className="w-5 h-5" />
             </div>
             <div>
@@ -84,7 +84,7 @@ export default function AboutHero() {
           </div>
 
           <div className="flex items-start gap-3.5 p-4 rounded-xl bg-white border border-[#E4EAF2] shadow-xs">
-            <div className="w-10 h-10 rounded-lg bg-[#24469A]/10 text-[#24469A] flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-lg bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>

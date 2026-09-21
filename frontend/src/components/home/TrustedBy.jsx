@@ -10,11 +10,11 @@ import {
 } from "lucide-react";
 
 const partners = [
-  { icon: Landmark, name: "GAD, Govt. of Assam" },
+  { icon: Landmark, name: "Government" },
   { icon: HeartPulse, name: "UTIITSL (AB-PMJAY)" },
   { icon: Building, name: "Punjab National Bank" },
   { icon: ShieldCheck, name: "Alankit Limited" },
-  { icon: Building2, name: "DC Offices of Assam" },
+  { icon: Building2, name: "DC Offices of India" },
   { icon: Layers, name: "Egolife E-Commerce" },
 ];
 
@@ -60,7 +60,7 @@ export default function TrustedBy() {
                 key={partner.name}
                 variants={item}
                 className="flex items-center gap-2.5 text-[#10182C] px-3 py-1.5 rounded-lg bg-white border border-[#E2E8F0] shadow-2xs">
-                <partner.icon className="w-4 h-4 text-[#24469A]" />
+                <partner.icon className="w-4 h-4 text-[#00AEEF]" />
                 <span className="text-xs sm:text-sm font-bold whitespace-nowrap">
                   {partner.name}
                 </span>

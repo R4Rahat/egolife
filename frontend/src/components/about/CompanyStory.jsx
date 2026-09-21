@@ -28,7 +28,7 @@ export default function CompanyStory() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-7">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F58220]">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF]">
               OUR FOUNDATION & JOURNEY
             </p>
             <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#10182C] leading-tight">
@@ -47,7 +47,7 @@ export default function CompanyStory() {
             <div className="mt-8 space-y-4">
               {storyPoints.map((pt, idx) => (
                 <div key={idx} className="flex items-start gap-3.5">
-                  <div className="w-6 h-6 rounded-full bg-[#24469A]/10 text-[#24469A] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="w-4 h-4" />
                   </div>
                   <div>
@@ -66,58 +66,58 @@ export default function CompanyStory() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-5">
-            <div className="relative rounded-2xl bg-gradient-to-br from-[#0D1629] to-[#172647] p-8 text-white shadow-xl shadow-[#0D1629]/10 overflow-hidden">
+            <div className="relative rounded-2xl bg-gradient-to-br from-[#E0F2FE] to-[#172647] p-8 text-[#10182C] shadow-xl shadow-[#0D1629]/10 overflow-hidden">
               {/* Decorative background circle */}
-              <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-[#24469A]/30 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-[#00AEEF]/30 rounded-full blur-2xl pointer-events-none" />
               <div className="absolute -left-10 -top-10 w-40 h-40 bg-[#F58220]/20 rounded-full blur-2xl pointer-events-none" />
 
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] font-semibold tracking-wider uppercase text-[#F58220]">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-[#7DD3FC]/60 text-[11px] font-semibold tracking-wider uppercase text-[#00AEEF]">
                   Institutional Profile
                 </div>
 
-                <h3 className="mt-4 text-xl font-extrabold text-white">
+                <h3 className="mt-4 text-xl font-extrabold text-[#10182C]">
                   eGoLife Governance Private Limited
                 </h3>
 
-                <p className="mt-2 text-xs text-[#9BB1C9] leading-relaxed">
+                <p className="mt-2 text-xs text-[#4B6179] leading-relaxed">
                   Incorporated under the Companies Act, dedicated to e-Governance, Enterprise Software Engineering, and Citizen Portal Development.
                 </p>
 
-                <div className="mt-6 space-y-4 pt-6 border-t border-white/10 text-xs">
+                <div className="mt-6 space-y-4 pt-6 border-t border-[#7DD3FC]/50 text-xs">
                   <div className="flex items-center gap-3">
-                    <Calendar className="w-4 h-4 text-[#F58220] shrink-0" />
+                    <Calendar className="w-4 h-4 text-[#00AEEF] shrink-0" />
                     <div>
-                      <span className="text-[#889EBA] block text-[11px]">Year of Inception</span>
-                      <span className="font-semibold text-white">2011 (15+ Years Active)</span>
+                      <span className="text-[#4B6179] block text-[11px]">Year of Inception</span>
+                      <span className="font-semibold text-[#10182C]">2011 (15+ Years Active)</span>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <MapPin className="w-4 h-4 text-[#F58220] shrink-0" />
+                    <MapPin className="w-4 h-4 text-[#00AEEF] shrink-0" />
                     <div>
-                      <span className="text-[#889EBA] block text-[11px]">Corporate Office</span>
-                      <span className="font-semibold text-white">
+                      <span className="text-[#4B6179] block text-[11px]">Corporate Office</span>
+                      <span className="font-semibold text-[#10182C]">
                         Vikrant Khand, Gomti Nagar, Lucknow – 226010, UP
                       </span>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <Building className="w-4 h-4 text-[#F58220] shrink-0" />
+                    <Building className="w-4 h-4 text-[#00AEEF] shrink-0" />
                     <div>
-                      <span className="text-[#889EBA] block text-[11px]">Key Empanelments</span>
-                      <span className="font-semibold text-white">
+                      <span className="text-[#4B6179] block text-[11px]">Key Empanelments</span>
+                      <span className="font-semibold text-[#10182C]">
                         UPLC, UPDESCO, MSME, RCUES
                       </span>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <Layers className="w-4 h-4 text-[#F58220] shrink-0" />
+                    <Layers className="w-4 h-4 text-[#00AEEF] shrink-0" />
                     <div>
-                      <span className="text-[#889EBA] block text-[11px]">Focus Sectors</span>
-                      <span className="font-semibold text-white">
+                      <span className="text-[#4B6179] block text-[11px]">Focus Sectors</span>
+                      <span className="font-semibold text-[#10182C]">
                         Municipalities, Smart Cities, Revenue, Citizen Portals
                       </span>
                     </div>
@@ -125,12 +125,12 @@ export default function CompanyStory() {
                 </div>
 
                 {/* Bottom Trust Badge */}
-                <div className="mt-6 rounded-xl bg-white/5 border border-white/10 p-3.5 flex items-center justify-between">
+                <div className="mt-6 rounded-xl bg-white/60 border border-[#7DD3FC]/50 p-3.5 flex items-center justify-between">
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-wider text-[#F58220]">
+                    <p className="text-[10px] uppercase font-bold tracking-wider text-[#00AEEF]">
                       Proven Execution
                     </p>
-                    <p className="text-sm font-bold text-white mt-0.5">80+ Government Projects</p>
+                    <p className="text-sm font-bold text-[#10182C] mt-0.5">80+ Government Projects</p>
                   </div>
                   <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-full bg-[#16A34A]/20 text-[#4ADE80] text-[11px] font-semibold border border-[#16A34A]/30">
                     Active Deployments

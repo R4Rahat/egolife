@@ -17,44 +17,42 @@ export default function ContactInfo() {
   return (
     <div className="space-y-6">
       {/* Registered Office & Corporate Profile Card */}
-      <div className="rounded-2xl bg-gradient-to-br from-[#0D1629] via-[#14203A] to-[#1C2C4E] p-7 sm:p-8 text-white shadow-xl relative overflow-hidden">
-        <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-[#24469A]/30 rounded-full blur-2xl pointer-events-none" />
+      <div className="rounded-2xl bg-gradient-to-br from-[#E0F2FE] via-[#BAE6FD] to-[#7DD3FC] p-7 sm:p-8 text-[#10182C] shadow-xl relative overflow-hidden">
+        <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-[#00AEEF]/30 rounded-full blur-2xl pointer-events-none" />
         <div className="absolute -left-12 -top-12 w-40 h-40 bg-[#F58220]/20 rounded-full blur-2xl pointer-events-none" />
 
         <div className="relative z-10">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-[#F58220] bg-white/10 px-2.5 py-1 rounded-full border border-white/15">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-[#00AEEF] bg-white/70 px-2.5 py-1 rounded-full border border-[#7DD3FC]/60">
             Registered Corporate Office
           </span>
 
-          <h3 className="text-xl font-extrabold text-white mt-3.5">
+          <h3 className="text-xl font-extrabold text-[#10182C] mt-3.5">
             EGOLIFE EGOVERNANCE PRIVATE LIMITED
           </h3>
-          <p className="text-xs text-[#A0B3CC] mt-1 font-mono">
+          <p className="text-xs text-[#4B6179] mt-1 font-mono">
             CIN: U72900AS2021PTC022087
           </p>
 
-          <div className="mt-6 space-y-4 pt-5 border-t border-white/10 text-xs">
+          <div className="mt-6 space-y-4 pt-5 border-t border-[#7DD3FC]/50 text-xs">
             {/* Address */}
             <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-[#F58220] shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
               <div>
-                <span className="text-[#889EBA] block text-[10px] uppercase font-bold">Address</span>
-                <span className="font-semibold text-white leading-relaxed block mt-0.5">
-                  Paikan Part II, P.O &amp; P.S - Krishnai,
-                  <br />
-                  Dist - Goalpara (Assam), PIN - 783126
+                <span className="text-[#4B6179] block text-[10px] uppercase font-bold">Address</span>
+                <span className="font-semibold text-[#10182C] leading-relaxed block mt-0.5">
+                  Entire Northeast Region
                 </span>
               </div>
             </div>
 
             {/* Phone */}
             <div className="flex items-start gap-3">
-              <Phone className="w-4 h-4 text-[#F58220] shrink-0 mt-0.5" />
+              <Phone className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
               <div>
-                <span className="text-[#889EBA] block text-[10px] uppercase font-bold">Helpline &amp; Sales</span>
+                <span className="text-[#4B6179] block text-[10px] uppercase font-bold">Helpline &amp; Sales</span>
                 <a
                   href="tel:+916002172653"
-                  className="font-semibold text-white hover:text-[#F58220] transition-colors block mt-0.5">
+                  className="font-semibold text-[#10182C] hover:text-[#00AEEF] transition-colors block mt-0.5">
                   +91 6002172653
                 </a>
               </div>
@@ -62,12 +60,12 @@ export default function ContactInfo() {
 
             {/* Email */}
             <div className="flex items-start gap-3">
-              <Mail className="w-4 h-4 text-[#F58220] shrink-0 mt-0.5" />
+              <Mail className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
               <div>
-                <span className="text-[#889EBA] block text-[10px] uppercase font-bold">Email Correspondence</span>
+                <span className="text-[#4B6179] block text-[10px] uppercase font-bold">Email Correspondence</span>
                 <a
                   href="mailto:egolifemd@gmail.com"
-                  className="font-semibold text-white hover:text-[#F58220] transition-colors block mt-0.5">
+                  className="font-semibold text-[#10182C] hover:text-[#00AEEF] transition-colors block mt-0.5">
                   egolifemd@gmail.com
                 </a>
               </div>
@@ -75,10 +73,10 @@ export default function ContactInfo() {
 
             {/* Website */}
             <div className="flex items-start gap-3">
-              <Globe className="w-4 h-4 text-[#F58220] shrink-0 mt-0.5" />
+              <Globe className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
               <div>
-                <span className="text-[#889EBA] block text-[10px] uppercase font-bold">Official Portal</span>
-                <span className="font-semibold text-white block mt-0.5">
+                <span className="text-[#4B6179] block text-[10px] uppercase font-bold">Official Portal</span>
+                <span className="font-semibold text-[#10182C] block mt-0.5">
                   www.egolife.in
                 </span>
               </div>
@@ -124,7 +122,7 @@ export default function ContactInfo() {
         <ul className="space-y-2 text-xs text-[#475569]">
           <li className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#16A34A] shrink-0" />
-            <span>Enrolment Agency EA Code 1507 (GAD Assam)</span>
+            <span>Government Authorized Agency</span>
           </li>
           <li className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#16A34A] shrink-0" />
@@ -136,7 +134,7 @@ export default function ContactInfo() {
           </li>
           <li className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#16A34A] shrink-0" />
-            <span>Assam State School Uniform Empanelled Supplier</span>
+            <span>Empanelled Supplier for Uniforms</span>
           </li>
         </ul>
       </div>

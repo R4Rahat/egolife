@@ -31,15 +31,15 @@ const services = [
     id: "aadhaar-enrolment",
     category: "Aadhaar & Citizen ID",
     title: "Aadhaar Enrolment Manpower & Kit Deployment",
-    partner: "GAD Assam | EA Code: 1507",
+    partner: "Government Authorized Agency",
     icon: Fingerprint,
     color: "from-blue-600 to-indigo-700",
     badge: "Official Enrolment Consortium",
     districts: ["Baksa", "Udalguri", "Tamulpur", "Barpeta", "Goalpara", "Nalbari"],
     summary:
-      "Turnkey vendor of certified manpower and biometric kits for Aadhaar generation under Deputy Commissioners and District Commissioners of Assam.",
+      "Turnkey vendor of certified manpower and biometric kits for Aadhaar generation under Deputy Commissioners and District Commissioners of India.",
     points: [
-      "Operating in consortium with BNK Capital Markets Ltd (Enrolment Agency EA Code 1507).",
+      "Operating in consortium with BNK Capital Markets Ltd (Government Authorized Agency).",
       "Empanelled under Deputy Commissioners of Baksa, Udalguri, Tamulpur, Barpeta, Goalpara, and District Commissioner Nalbari.",
       "Complete deployment of certified operators, biometric Iris scanners, slap fingerprint scanners, and GPS-enabled laptops.",
       "Execution of Aadhaar generation camps at Gram Panchayats, government schools, and block administration centers.",
@@ -52,10 +52,10 @@ const services = [
     partner: "Alankit Limited | Labour-Welfare Dept",
     icon: ShieldCheck,
     color: "from-indigo-600 to-blue-600",
-    badge: "Assam Labour Welfare",
-    districts: ["Statewide Assam Districts"],
+    badge: "India Labour Welfare",
+    districts: ["Statewide India Districts"],
     summary:
-      "Authorized vendor of Alankit Limited operating dedicated Aadhaar Enrolment Centers for workers and citizens under the Labour-Welfare Department of Assam.",
+      "Authorized vendor of Alankit Limited operating dedicated Aadhaar Enrolment Centers for workers and citizens under the Labour-Welfare Department of India.",
     points: [
       "Setup and management of specialized enrolment desks in designated labor welfare zones.",
       "Fast-track documentation, mobile/biometric updates, and mandatory biometrics for youth and unorganized workers.",
@@ -70,9 +70,9 @@ const services = [
     icon: Building,
     color: "from-sky-600 to-blue-700",
     badge: "Banking Branch Operations",
-    districts: ["Various PNB Branches Across Assam"],
+    districts: ["Various PNB Branches Across India"],
     summary:
-      "Appointed by BNK Capital Markets Ltd as the manpower and hardware kit supplier across Punjab National Bank branches throughout Assam.",
+      "Appointed by BNK Capital Markets Ltd as the manpower and hardware kit supplier across Punjab National Bank branches throughout India.",
     points: [
       "Stationing certified banking enrolment operators inside Punjab National Bank branches.",
       "Supplying UIDAI-certified hardware kits, verification printers, and secure network infrastructure.",
@@ -89,7 +89,7 @@ const services = [
     badge: "National Health Mission",
     districts: ["Goalpara", "Bongaigaon", "Dhubri", "Karimganj", "Hailakandi", "Cachar"],
     summary:
-      "Official vendor under UTI Infrastructure Technology and Services Limited (UTIITSL) for implementing Ayushman Bharat (AB-PMJAY) health cards across 6 key Assam districts.",
+      "Official vendor under UTI Infrastructure Technology and Services Limited (UTIITSL) for implementing Ayushman Bharat (AB-PMJAY) health cards across 6 key India districts.",
     points: [
       "Field mobilization and beneficiary verification across Goalpara, Bongaigaon, Dhubri, Karimganj, Hailakandi, and Cachar.",
       "Issuance of Ayushman Golden Cards providing cashless health cover up to ₹5 Lakh per family per year.",
@@ -121,7 +121,7 @@ const services = [
     icon: Landmark,
     color: "from-amber-500 to-orange-600",
     badge: "IIBF / DRA Certified Team",
-    districts: ["Assam & North-East Region"],
+    districts: ["India & Pan India Region"],
     summary:
       "Professional team of certified Debt Recovery Agents (DRA) adhering strictly to RBI ethical guidelines for non-performing asset (NPA) resolution.",
     points: [
@@ -134,15 +134,15 @@ const services = [
     id: "school-uniform-supply",
     category: "Govt Supply & Uniforms",
     title: "Government School Uniform Supply",
-    partner: "Department of School Education, Assam",
+    partner: "Department of School Education, India",
     icon: Shirt,
     color: "from-orange-500 to-red-600",
     badge: "State Public Procurement",
-    districts: ["Multiple Districts of Assam"],
+    districts: ["Multiple Districts of India"],
     summary:
       "Large-scale manufacturing, tailoring, packaging, and direct distribution of quality school uniforms for government and provincialized schools.",
     points: [
-      "Proven execution track record delivering institutional school uniforms across multiple districts of Assam.",
+      "Proven execution track record delivering institutional school uniforms across multiple districts of India.",
       "Standardized sizing, high-durability fabrics complying with departmental textile specifications.",
       "End-to-end logistics from regional manufacturing units straight to block educational offices and schools.",
     ],
@@ -172,7 +172,7 @@ const services = [
     icon: Lightbulb,
     color: "from-amber-600 to-yellow-600",
     badge: "In-House Manufacturing",
-    districts: ["North-East India & West Bengal"],
+    districts: ["All India & West Bengal"],
     summary:
       "Indigenous manufacturing and distribution of premium, energy-efficient LED lighting products under our registered brand 'Egolife LED'.",
     points: [
@@ -189,11 +189,11 @@ const services = [
     icon: ShoppingBag,
     color: "from-purple-600 to-indigo-700",
     badge: "200+ Digital Services",
-    districts: ["North-East India & West Bengal"],
+    districts: ["All India & West Bengal"],
     summary:
       "Strategic partner of Egolife E-Commerce Ltd, delivering a comprehensive portfolio of over 200 consumer, commercial, and utility services.",
     points: [
-      "Regional distribution network spanning all eight North-Eastern states and West Bengal.",
+      "Regional distribution network spanning all eight Pan Indiaern states and West Bengal.",
       "Digital payment gateways, utility bill collections, ticketing, and consumer goods distribution.",
       "Empowering local village-level entrepreneurs (VLEs) and retail outlets with high-margin digital services.",
     ],
@@ -205,10 +205,10 @@ const services = [
     partner: "Corporate Houses & Government Bodies",
     icon: Laptop,
     color: "from-blue-600 to-cyan-700",
-    badge: "7+ Years Industry Experience",
+    badge: "11 years Industry Experience",
     districts: ["Corporate & Institutional Clients"],
     summary:
-      "With 7+ years of deep IT industry experience, our specialist team provides end-to-end consulting, system architecture deployment, and capacity building.",
+      "With 11 years of deep IT industry experience, our specialist team provides end-to-end consulting, system architecture deployment, and capacity building.",
     points: [
       "Consulting on digital transformation, enterprise software adoption, and administrative portal modernization.",
       "On-site deployment of secure databases, LAN/WAN architectures, and cloud-hosted portals.",
@@ -223,7 +223,7 @@ const services = [
     icon: ShieldCheck,
     color: "from-slate-700 to-zinc-800",
     badge: "Taxation & Legal Filings",
-    districts: ["North-East Business Sector"],
+    districts: ["Pan India Business Sector"],
     summary:
       "Professional tax advisory, GST compliance, income tax e-filing, and regulatory auditing assistance for enterprises and contractors.",
     points: [
@@ -247,14 +247,14 @@ export default function ServicesCatalog() {
       <div className="max-w-[1220px] mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#24469A]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF]">
             DETAILED PORTFOLIO OF CAPABILITIES
           </p>
           <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#10182C]">
             Our Core Services & Public Sector Engagements
           </h2>
           <p className="mt-3 text-[#5A6F87] text-sm sm:text-base">
-            Backed by 7+ years of IT experience, official empanelments with GAD Assam (EA Code 1507), UTIITSL, and leading financial institutions.
+            Backed by 11 years of IT experience, official empanelments with  (Government Authorized), UTIITSL, and leading financial institutions.
           </p>
         </div>
 
@@ -266,7 +266,7 @@ export default function ServicesCatalog() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
                 activeCategory === cat
-                  ? "bg-[#24469A] text-white shadow-sm"
+                  ? "bg-[#00AEEF] text-white shadow-sm"
                   : "bg-white text-[#4B6179] border border-[#E2E8F0] hover:bg-[#F1F5F9] hover:text-[#10182C]"
               }`}>
               {cat}
@@ -287,25 +287,25 @@ export default function ServicesCatalog() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  className="rounded-2xl bg-white border border-[#E4EAF2] p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg hover:border-[#24469A]/30 transition-all group">
+                  className="rounded-2xl bg-white border border-[#E4EAF2] p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg hover:border-[#00AEEF]/30 transition-all group">
                   <div>
                     {/* Top Row: Icon + Badges */}
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex items-center gap-3.5">
-                        <div className="w-12 h-12 rounded-xl bg-[#24469A]/10 text-[#24469A] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                        <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                           <IconComponent className="w-6 h-6" />
                         </div>
                         <div>
                           <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#F58220]">
                             {service.category}
                           </span>
-                          <h3 className="text-lg font-bold text-[#10182C] group-hover:text-[#24469A] transition-colors leading-snug">
+                          <h3 className="text-lg font-bold text-[#10182C] group-hover:text-[#00AEEF] transition-colors leading-snug">
                             {service.title}
                           </h3>
                         </div>
                       </div>
 
-                      <span className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F2F5FB] text-[#24469A] border border-[#24469A]/15">
+                      <span className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F2F5FB] text-[#00AEEF] border border-[#00AEEF]/15">
                         {service.badge}
                       </span>
                     </div>
@@ -360,7 +360,7 @@ export default function ServicesCatalog() {
 
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#24469A] hover:text-[#1E3A8A] transition-colors">
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00AEEF] hover:text-[#1E3A8A] transition-colors">
                       <span>Inquire for Deployment</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>

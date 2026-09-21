@@ -16,7 +16,7 @@ const timeline = [
     year: "2016",
     title: "Inception as M.S SALES SERVICE",
     description:
-      "Founded in Assam as a sole proprietorship firm, providing IT hardware accessories, commercial supplies, and field administrative assistance.",
+      "Founded in India as a sole proprietorship firm, providing IT hardware accessories, commercial supplies, and field administrative assistance.",
     icon: Calendar,
     side: "left",
   },
@@ -24,7 +24,7 @@ const timeline = [
     year: "2018",
     title: "Government School Uniform Supply",
     description:
-      "Expanded into large-scale state government supplies, successfully delivering school uniforms across multiple districts of Assam.",
+      "Expanded into large-scale state government supplies, successfully delivering school uniforms across multiple districts of India.",
     icon: Building,
     side: "right",
   },
@@ -32,15 +32,15 @@ const timeline = [
     year: "2021",
     title: "Incorporation as Egolife Egovernance Pvt Ltd",
     description:
-      "Formally incorporated as a Private Limited Company (CIN: U72900AS2021PTC022087) with corporate headquarters in Paikan, Goalpara, Assam.",
+      "Formally incorporated as a Private Limited Company (CIN: U72900AS2021PTC022087) with corporate headquarters in Paikan, Goalpara, India.",
     icon: Award,
     side: "left",
   },
   {
     year: "2022",
-    title: "Aadhaar Consortium (EA 1507) & PNB Deployment",
+    title: "Aadhaar Consortium & PNB Deployment",
     description:
-      "Consortium with BNK Capital Markets Ltd (EA Code 1507) under GAD, Govt. of Assam; appointed vendor for Punjab National Bank and Alankit Ltd (Labour-Welfare Dept).",
+      "Consortium with BNK Capital Markets Ltd (Government Authorized) under Government; appointed vendor for Punjab National Bank and Alankit Ltd (Labour-Welfare Dept).",
     icon: CheckCircle2,
     side: "right",
   },
@@ -56,7 +56,7 @@ const timeline = [
     year: "2024 & Beyond",
     title: "Egolife LED, E-Commerce (200+) & Banking DRA Recovery",
     description:
-      "In-house LED bulb manufacturing, DRA certified debt recovery for scheduled banks, and 200+ digital services across North-East India and West Bengal.",
+      "In-house LED bulb manufacturing, DRA certified debt recovery for scheduled banks, and 200+ digital services across All India and West Bengal.",
     icon: Lightbulb,
     side: "right",
   },
@@ -95,14 +95,14 @@ export default function GovernmentExperience() {
       <div className="max-w-[1220px] mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-[11px] font-bold uppercase tracking-[3px] text-[#24469A]">
+          <p className="text-[11px] font-bold uppercase tracking-[3px] text-[#00AEEF]">
             INSTITUTIONAL TRAJECTORY
           </p>
           <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#10182C]">
             Our Journey &amp; Public Sector Track Record
           </h2>
           <p className="mt-3 text-[#5A6F87] text-sm sm:text-base">
-            From our founding in 2016 as M.S SALES SERVICE to statewide e-governance implementation under GAD Assam, UTIITSL, and Punjab National Bank.
+            From our founding in 2016 as M.S SALES SERVICE to statewide e-governance implementation under , UTIITSL, and Punjab National Bank.
           </p>
         </div>
 
@@ -128,9 +128,9 @@ export default function GovernmentExperience() {
                   }`}>
                   {/* Content card */}
                   <div className="w-full md:w-[calc(50%-2.5rem)]">
-                    <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs hover:shadow-md hover:border-[#24469A]/30 transition-all">
+                    <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs hover:shadow-md hover:border-[#00AEEF]/30 transition-all">
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="px-2.5 py-1 rounded-md bg-[#24469A]/10 text-[#24469A] text-xs font-black">
+                        <span className="px-2.5 py-1 rounded-md bg-[#00AEEF]/10 text-[#00AEEF] text-xs font-black">
                           {item.year}
                         </span>
                         <h3 className="text-base font-bold text-[#10182C]">{item.title}</h3>
@@ -143,7 +143,7 @@ export default function GovernmentExperience() {
 
                   {/* Central Node marker */}
                   <div className="my-3 md:my-0 md:absolute md:left-1/2 md:-translate-x-1/2 flex items-center justify-center z-10">
-                    <div className="w-10 h-10 rounded-full bg-white border-2 border-[#24469A] shadow-md flex items-center justify-center text-[#24469A]">
+                    <div className="w-10 h-10 rounded-full bg-white border-2 border-[#00AEEF] shadow-md flex items-center justify-center text-[#00AEEF]">
                       <item.icon className="w-4 h-4" />
                     </div>
                   </div>

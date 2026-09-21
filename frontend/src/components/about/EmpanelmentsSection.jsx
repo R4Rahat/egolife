@@ -64,22 +64,22 @@ export default function EmpanelmentsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="rounded-2xl border border-[#E4EAF2] p-7 bg-gradient-to-b from-white to-[#F9FAFC] hover:shadow-lg hover:border-[#24469A]/30 transition-all group flex flex-col justify-between">
+              className="rounded-2xl border border-[#E4EAF2] p-7 bg-gradient-to-b from-white to-[#F9FAFC] hover:shadow-lg hover:border-[#00AEEF]/30 transition-all group flex flex-col justify-between">
               <div>
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3.5">
-                    <div className="w-12 h-12 rounded-xl bg-[#24469A]/10 text-[#24469A] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                       <item.icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-[#10182C] group-hover:text-[#24469A] transition-colors">
+                      <h3 className="text-lg font-bold text-[#10182C] group-hover:text-[#00AEEF] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-xs text-[#526880] font-medium">{item.sub}</p>
                     </div>
                   </div>
 
-                  <span className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F2F5FB] text-[#24469A] border border-[#24469A]/15">
+                  <span className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F2F5FB] text-[#00AEEF] border border-[#00AEEF]/15">
                     {item.badge}
                   </span>
                 </div>
@@ -108,7 +108,7 @@ export default function EmpanelmentsSection() {
           transition={{ duration: 0.5 }}
           className="mt-10 rounded-xl bg-[#F4F7FC] border border-[#DFE6F2] p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#24469A] text-white flex items-center justify-center shrink-0 text-xs font-bold">
+            <div className="w-8 h-8 rounded-full bg-[#00AEEF] text-white flex items-center justify-center shrink-0 text-xs font-bold">
               ✓
             </div>
             <div>
@@ -120,7 +120,7 @@ export default function EmpanelmentsSection() {
               </p>
             </div>
           </div>
-          <span className="text-xs font-semibold text-[#24469A] whitespace-nowrap">
+          <span className="text-xs font-semibold text-[#00AEEF] whitespace-nowrap">
             Audit-Ready Operations
           </span>
         </motion.div>

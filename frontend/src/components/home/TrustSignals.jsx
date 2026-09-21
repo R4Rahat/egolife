@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const trustSignals = [
   "CIN: U72900AS2021PTC022087",
-  "EA Code 1507 (GAD Assam)",
+  "Government Authorized Agency",
   "UTIITSL Authorized Partner",
   "DRA Certified Agency",
   "Punjab National Bank Vendor",
@@ -12,25 +12,20 @@ const trustSignals = [
 
 const stats = [
   {
-    value: 7,
+    value: 11,
     label: "Years in IT Industry",
     hasPlus: true,
   },
   {
-    value: 11,
-    label: "Assam Districts Covered",
+    value: 28,
+    label: "India Districts Covered",
     hasPlus: true,
   },
   {
     value: 200,
     label: "Services Across NE & WB",
     hasPlus: true,
-  },
-  {
-    value: 1507,
-    label: "Enrolment Agency Code",
-    hasPlus: false,
-  },
+  }
 ];
 
 function Counter({ target, active, hasPlus }) {
@@ -61,7 +56,7 @@ function Counter({ target, active, hasPlus }) {
   return (
     <>
       {count}
-      {hasPlus && <span className="text-[#F58220]">+</span>}
+      {hasPlus && <span className="text-[#00AEEF]">+</span>}
     </>
   );
 }
@@ -125,7 +120,7 @@ export default function TrustSignals() {
           className="text-center">
           <div className="mb-4 flex items-center justify-center gap-2">
             <span className="h-[6px] w-[6px] rounded-full bg-[#F58220]" />
-            <span className="text-[11px] font-semibold uppercase tracking-[3.5px] text-[#24469A]">
+            <span className="text-[11px] font-semibold uppercase tracking-[3.5px] text-[#00AEEF]">
               Trust Signals
             </span>
           </div>
@@ -136,8 +131,8 @@ export default function TrustSignals() {
             Audited. Accredited.
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[620px] text-[13px] sm:text-[14px] leading-[1.65] text-[#526B84]">
-            Official vendor partnerships and consortium empanelments under GAD Govt. of Assam, UTIITSL, and leading financial institutions.
+          <p className="mx-auto mt-4 max-w-[620px] text-[13px] sm:text-[14px] leading-[1.65] text-[#4B6179]">
+            Official vendor partnerships and consortium empanelments under Government, UTIITSL, and leading financial institutions.
           </p>
         </motion.div>
 
@@ -151,9 +146,9 @@ export default function TrustSignals() {
             <motion.div
               key={signal}
               variants={itemVariants}
-              className="flex h-[46px] items-center gap-2.5 rounded-lg border border-[#D8E3ED] bg-[#F9FBFD] px-4 sm:px-5 transition-all duration-300 hover:border-[#24469A]/30 hover:bg-white hover:shadow-xs">
-              <CheckCircle2 size={15} strokeWidth={2} className="shrink-0 text-[#F58220]" />
-              <span className="whitespace-nowrap text-xs font-semibold text-[#173D68]">
+              className="flex h-[46px] items-center gap-2.5 rounded-lg border border-[#D8E3ED] bg-[#F9FBFD] px-4 sm:px-5 transition-all duration-300 hover:border-[#00AEEF]/30 hover:bg-white hover:shadow-xs">
+              <CheckCircle2 size={15} strokeWidth={2} className="shrink-0 text-[#00AEEF]" />
+              <span className="whitespace-nowrap text-xs font-semibold text-[#0369A1]">
                 {signal}
               </span>
             </motion.div>
@@ -171,11 +166,11 @@ export default function TrustSignals() {
               key={stat.label}
               variants={itemVariants}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="flex h-[110px] flex-col items-center justify-center rounded-xl border border-[#D8E3ED] bg-white p-3 transition-all duration-300 hover:border-[#24469A]/30 hover:shadow-sm">
-              <div className="text-[28px] sm:text-[32px] font-extrabold leading-none tracking-[-1.5px] text-[#24469A]">
+              className="flex h-[110px] flex-col items-center justify-center rounded-xl border border-[#D8E3ED] bg-white p-3 transition-all duration-300 hover:border-[#00AEEF]/30 hover:shadow-sm">
+              <div className="text-[28px] sm:text-[32px] font-extrabold leading-none tracking-[-1.5px] text-[#00AEEF]">
                 <Counter target={stat.value} active={active} hasPlus={stat.hasPlus} />
               </div>
-              <p className="mt-2 text-center text-[10px] sm:text-[11px] font-medium text-[#526B84]">
+              <p className="mt-2 text-center text-[10px] sm:text-[11px] font-medium text-[#4B6179]">
                 {stat.label}
               </p>
             </motion.div>

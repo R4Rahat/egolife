@@ -50,6 +50,9 @@ export default function App() {
         </Routes>
 
         <Footer />
+        <a href="/contact" className="fixed bottom-6 right-6 bg-[#00AEEF] hover:bg-[#0092c8] text-white font-bold py-3 px-6 rounded-full shadow-lg z-50 transition-transform transform hover:scale-105 flex items-center gap-2">
+          <span>Enquiry</span>
+        </a>
       </BrowserRouter>
     </div>
   );

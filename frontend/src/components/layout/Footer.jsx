@@ -28,7 +28,7 @@ const registrations = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0D1629] text-white">
+    <footer className="bg-[#E0F2FE] text-[#10182C]">
       {/* ========================================= */}
       {/* MAIN FOOTER                               */}
       {/* ========================================= */}
@@ -88,7 +88,7 @@ export default function Footer() {
                   text-[#8190A5]
                   transition-all
                   duration-200
-                  hover:bg-[#24469A]
+                  hover:bg-[#00AEEF]
                   hover:text-white
                 ">
                 <FaFacebookF size={11} />
@@ -109,7 +109,7 @@ export default function Footer() {
                   text-[#8190A5]
                   transition-all
                   duration-200
-                  hover:bg-[#24469A]
+                  hover:bg-[#00AEEF]
                   hover:text-white
                 ">
                 <FaInstagram size={12} />
@@ -130,7 +130,7 @@ export default function Footer() {
                   text-[#8190A5]
                   transition-all
                   duration-200
-                  hover:bg-[#24469A]
+                  hover:bg-[#00AEEF]
                   hover:text-white
                 ">
                 <FaLinkedinIn size={11} />
@@ -151,7 +151,7 @@ export default function Footer() {
                   text-[#8190A5]
                   transition-all
                   duration-200
-                  hover:bg-[#24469A]
+                  hover:bg-[#00AEEF]
                   hover:text-white
                 ">
                 <FaXTwitter size={11} />
@@ -171,7 +171,7 @@ export default function Footer() {
                 font-bold
                 uppercase
                 tracking-[0.5px]
-                text-white
+                text-[#10182C]
               ">
               Quick Links
             </h3>
@@ -207,7 +207,7 @@ export default function Footer() {
                 font-bold
                 uppercase
                 tracking-[0.5px]
-                text-white
+                text-[#10182C]
               ">
               Registrations
             </h3>
@@ -240,7 +240,7 @@ export default function Footer() {
                 font-bold
                 uppercase
                 tracking-[0.5px]
-                text-white
+                text-[#10182C]
               ">
               Contact
             </h3>
@@ -250,7 +250,7 @@ export default function Footer() {
               <MapPin
                 size={12}
                 strokeWidth={1.7}
-                className="mt-[2px] shrink-0 text-[#F58220]"
+                className="mt-[2px] shrink-0 text-[#00AEEF]"
               />
 
               <p
@@ -272,7 +272,7 @@ export default function Footer() {
               <Phone
                 size={12}
                 strokeWidth={1.7}
-                className="mt-[1px] shrink-0 text-[#F58220]"
+                className="mt-[1px] shrink-0 text-[#00AEEF]"
               />
 
               <div className="text-[9px] leading-[1.55]">
@@ -305,7 +305,7 @@ export default function Footer() {
               <Mail
                 size={12}
                 strokeWidth={1.7}
-                className="mt-[1px] shrink-0 text-[#F58220]"
+                className="mt-[1px] shrink-0 text-[#00AEEF]"
               />
 
               <a

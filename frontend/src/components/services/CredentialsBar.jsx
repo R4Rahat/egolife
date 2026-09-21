@@ -9,7 +9,7 @@ export default function CredentialsBar() {
     },
     {
       icon: Award,
-      label: "EA Code: 1507 (GAD Assam)",
+      label: "Government Authorized Agency",
       sub: "BNK Capital Consortium",
     },
     {
@@ -35,16 +35,16 @@ export default function CredentialsBar() {
   ];
 
   return (
-    <div className="bg-[#0D1629] text-white py-5 border-b border-[#1E2C4A]">
+    <div className="bg-[#E0F2FE] text-[#10182C] py-5 border-b border-[#1E2C4A]">
       <div className="max-w-[1220px] mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
           {credentials.map((cred, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2.5 p-2 rounded-lg bg-white/5 border border-white/8 hover:bg-white/10 transition-colors">
-              <cred.icon className="w-4 h-4 text-[#F58220] shrink-0" />
+              className="flex items-center gap-2.5 p-2 rounded-lg bg-white/60 border border-white/8 hover:bg-white/10 transition-colors">
+              <cred.icon className="w-4 h-4 text-[#00AEEF] shrink-0" />
               <div className="min-w-0">
-                <p className="text-[11px] font-bold text-white truncate">{cred.label}</p>
+                <p className="text-[11px] font-bold text-[#10182C] truncate">{cred.label}</p>
                 <p className="text-[10px] text-[#8EA2BC] truncate">{cred.sub}</p>
               </div>
             </div>
