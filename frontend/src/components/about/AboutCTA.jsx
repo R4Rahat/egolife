@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 
-const WHATSAPP_URL = "https://wa.me/919044095988";
+const WHATSAPP_URL = "https://wa.me/916002172653";
 
 export default function AboutCTA() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1220px] mx-auto px-6">
-        <div className="relative rounded-3xl bg-gradient-to-br from-[#E0F2FE] via-[#121E38] to-[#172647] p-8 sm:p-12 md:p-16 text-[#10182C] overflow-hidden shadow-2xl">
+        <div className="relative rounded-3xl bg-[#E0F2FE] p-8 sm:p-12 md:p-16 text-[#10182C] overflow-hidden shadow-2xl">
           {/* Background Decorative Glows */}
-          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#00AEEF]/30 blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-80 h-80 rounded-full bg-[#F58220]/20 blur-3xl pointer-events-none" />
+          <div className="pointer-events-none absolute -left-24 -top-24 h-[300px] w-[300px] rounded-full bg-[#F58220]/15 blur-[80px]" />
+          <div className="pointer-events-none absolute -right-24 top-0 h-[280px] w-[280px] rounded-full bg-[#00AEEF]/30 blur-[90px]" />
 
           <div className="relative z-10 max-w-3xl">
             <motion.div
@@ -29,7 +29,7 @@ export default function AboutCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-[#10182C]">
               Ready to Modernize Your Administrative & Public Services?
             </motion.h2>
 
@@ -52,7 +52,7 @@ export default function AboutCTA() {
               className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#00AEEF] px-6 py-3 text-sm font-semibold text-[#10182C] transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                className="inline-flex items-center gap-2 rounded-full bg-[#00AEEF] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#0092C8] shadow-md hover:shadow-lg hover:-translate-y-0.5">
                 <span>Contact Our Specialists</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -76,15 +76,15 @@ export default function AboutCTA() {
             <div className="mt-12 pt-8 border-t border-[#7DD3FC]/50 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#4B6179]">
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                <span>Sales: +91 9044095988 / 77</span>
+                <a href="tel:+916002172653" className="hover:text-[#00AEEF] transition-colors">Call: +91 6002172653</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                <span>Direct: support@egolife.in</span>
+                <a href="mailto:info@egolife.in" className="hover:text-[#00AEEF] transition-colors">info@egolife.in</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <MapPin className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                <span>Gomti Nagar, Lucknow, UP</span>
+                <span>Paikan, Goalpara (Assam)</span>
               </div>
             </div>
           </div>

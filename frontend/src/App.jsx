@@ -12,7 +12,7 @@ function PagePlaceholder({ title }) {
     <div className="bg-grid">
       <div className="max-w-[1220px] mx-auto px-6 py-32 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F58220]">
-          eGoLife Governance
+          Egolife Egovernance Private Limited
         </p>
         <h1 className="mt-3 text-4xl font-extrabold text-[#10182C]">{title}</h1>
         <p className="mt-4 text-[#4B6179]">This page is under construction.</p>
@@ -31,8 +31,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route
-            path="/government"
-            element={<PagePlaceholder title="Government Solutions" />}
+            path="/partner"
+            element={<PagePlaceholder title="Become a Partner" />}
           />
           <Route
             path="/industries"

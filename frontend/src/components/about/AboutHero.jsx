@@ -32,7 +32,7 @@ export default function AboutHero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00AEEF]/8 border border-[#00AEEF]/15 text-[#00AEEF] text-xs font-semibold tracking-wide mb-5">
             <ShieldCheck className="w-4 h-4 text-[#00AEEF]" />
-            <span>ESTABLISHED 2011 • GOVERNANCE & DIGITAL INNOVATION</span>
+            <span>ESTABLISHED 2021 • GOVERNANCE & DIGITAL INNOVATION</span>
           </motion.div>
 
           <motion.h1
@@ -51,9 +51,9 @@ export default function AboutHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.2 }}
             className="mt-6 text-base sm:text-lg text-[#4B6179] leading-relaxed">
-            Headquartered in Lucknow, eGoLife Governance Private Limited has spent over 15 years
-            partnering with state departments, municipal corporations, and enterprise bodies to
-            engineer mission-critical software, citizen-first service portals, and transparent administrative workflows.
+            Headquartered in Goalpara, Assam, Egolife Egovernance Private Limited combines technology,
+            digital services, financial solutions and business support services to create convenient
+            solutions for the modern economy.
           </motion.p>
         </div>
 
@@ -68,8 +68,8 @@ export default function AboutHero() {
               <Award className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xl font-black text-[#10182C]">15+ Years</p>
-              <p className="text-xs text-[#62778E] mt-0.5 font-medium">Public Sector Expertise</p>
+              <p className="text-xl font-black text-[#10182C]">Multi-Service</p>
+              <p className="text-xs text-[#62778E] mt-0.5 font-medium">Technology Platform</p>
             </div>
           </div>
 
@@ -78,8 +78,8 @@ export default function AboutHero() {
               <Building2 className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xl font-black text-[#10182C]">80+ Projects</p>
-              <p className="text-xs text-[#62778E] mt-0.5 font-medium">Government Engagements</p>
+              <p className="text-xl font-black text-[#10182C]">Pan India</p>
+              <p className="text-xs text-[#62778E] mt-0.5 font-medium">Key Service Areas</p>
             </div>
           </div>
 
@@ -88,8 +88,8 @@ export default function AboutHero() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xl font-black text-[#10182C]">120+ Platforms</p>
-              <p className="text-xs text-[#62778E] mt-0.5 font-medium">Enterprise & Civic Systems</p>
+              <p className="text-xl font-black text-[#10182C]">100% Secure</p>
+              <p className="text-xs text-[#62778E] mt-0.5 font-medium">Digital Governance</p>
             </div>
           </div>
 
@@ -98,8 +98,8 @@ export default function AboutHero() {
               <Users2 className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xl font-black text-[#10182C]">200+ Clients</p>
-              <p className="text-xs text-[#62778E] mt-0.5 font-medium">Served Across India</p>
+              <p className="text-xl font-black text-[#10182C]">Citizen First</p>
+              <p className="text-xs text-[#62778E] mt-0.5 font-medium">Service Ecosystem</p>
             </div>
           </div>
         </motion.div>

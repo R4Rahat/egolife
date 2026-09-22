@@ -164,7 +164,7 @@ export default function TrustSignals() {
         </motion.div>
 
         {/* Stats */}
-        <motion.div
+        {/* <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={active ? "visible" : "hidden"}
@@ -189,7 +189,7 @@ export default function TrustSignals() {
               </p>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

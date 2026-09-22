@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <TrustedBy />
       <WhyChooseUs />
       <IndustriesSection />

@@ -4,28 +4,28 @@ import { Compass, Target, HeartHandshake, ShieldCheck, Cpu, Eye } from "lucide-r
 export default function CoreValues() {
   const values = [
     {
-      icon: HeartHandshake,
-      title: "Citizen-Centric Design",
-      desc: "Every portal and workflow is architected for maximum usability, multi-lingual accessibility, and minimal friction for common citizens.",
-      badge: "Inclusivity",
+      icon: Cpu,
+      title: "Technology",
+      desc: "Delivering solutions with innovation and professional platforms.",
+      badge: "Innovation",
     },
     {
       icon: ShieldCheck,
-      title: "Data Sovereignty & Security",
-      desc: "Strict adherence to government cybersecurity guidelines, role-based access, end-to-end encryption, and comprehensive audit trails.",
+      title: "Trust",
+      desc: "Building a dependable ecosystem for users and businesses alike.",
       badge: "Integrity",
     },
     {
-      icon: Cpu,
-      title: "High-Availability Scalability",
-      desc: "Cloud-native architectures engineered to handle peak loads during tax assessment deadlines, welfare scheme rollouts, and billing cycles.",
-      badge: "Reliability",
+      icon: Eye,
+      title: "Transparency",
+      desc: "Simplifying processes through clear, professional and open service delivery.",
+      badge: "Clarity",
     },
     {
-      icon: Eye,
-      title: "Radical Transparency",
-      desc: "Empowering departmental administrators and the public with real-time tracking, tamper-proof logs, and transparent status dashboards.",
-      badge: "Accountability",
+      icon: HeartHandshake,
+      title: "Commitment to Service",
+      desc: "We believe technology should make life easier. We are committed to customer-focused service.",
+      badge: "Service",
     },
   ];
 
@@ -61,10 +61,10 @@ export default function CoreValues() {
               OUR VISION
             </span>
             <h3 className="mt-2 text-xl font-bold text-[#10182C]">
-              Empowering India&apos;s Digital Governance Era
+              Building a Trusted Service Ecosystem
             </h3>
             <p className="mt-3 text-sm text-[#5B6F84] leading-relaxed">
-              To be the most dependable governance technology institution in India, bridging the divide between citizens and administration through reliable, accessible, and high-performance digital platforms.
+              To build a trusted and technology-enabled service ecosystem that makes essential services simpler, faster and more accessible for people and businesses.
             </p>
           </motion.div>
 
@@ -82,10 +82,10 @@ export default function CoreValues() {
               OUR MISSION
             </span>
             <h3 className="mt-2 text-xl font-bold text-[#10182C]">
-              Delivering Sustainable & Transparent Systems
+              Expanding Capabilities and Needs
             </h3>
             <p className="mt-3 text-sm text-[#5B6F84] leading-relaxed">
-              To build modern, compliant, and cost-effective IT infrastructure for government bodies that enhances operational agility, guarantees financial and audit integrity, and elevates the quality of civic services.
+              Our mission is to provide professional, transparent and technology-driven services while continuously expanding our capabilities to meet the changing needs of customers, businesses and institutions.
             </p>
           </motion.div>
         </div>

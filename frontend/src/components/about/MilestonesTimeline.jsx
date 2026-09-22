@@ -42,7 +42,7 @@ export default function MilestonesTimeline() {
   ];
 
   return (
-    <section className="py-20 bg-[#F8FAFC] border-b border-[#EAEEF4]">
+    <section id="milestones" className="py-20 bg-[#F8FAFC] border-b border-[#EAEEF4]">
       <div className="max-w-[1220px] mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF]">

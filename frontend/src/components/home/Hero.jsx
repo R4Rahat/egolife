@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-[#00AEEF]/6 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[380px] h-[280px] bg-[#F58220]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-[1220px] mx-auto px-4 sm:px-6 pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pt-16 lg:pb-24 grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
+      <div className="max-w-[1220px] mx-auto px-4 sm:px-6 pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pt-16 lg:pb-24 grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-22 items-center">
         {/* LEFT COLUMN */}
         <div>
           {/* Official Badges */}
@@ -65,8 +65,23 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             custom={2}
-            className="mt-5 max-w-xl text-[15px] lg:text-base leading-relaxed text-[#4B6179]">
-            <strong className="text-[#10182C]">EGOLIFE EGOVERNANCE PRIVATE LIMITED</strong> is an India-based technology institution delivering statewide Aadhaar enrolment (Government Authorized), Ayushman Bharat healthcare drives, DRA certified banking recovery, and government procurement solutions across All India.
+            className="
+    mt-5
+    max-w-2xl
+    text-[15px]
+    lg:text-base
+    leading-relaxed
+    text-[#4B6179]
+    text-justify
+  "
+          >
+            <strong className="text-[#10182C]">
+              EGOLIFE EGOVERNANCE PRIVATE LIMITED
+            </strong>{" "}
+            is an India-based technology institution delivering statewide Aadhaar
+            enrolment (Government Authorized), Ayushman Bharat healthcare drives, DRA
+            certified banking recovery, and government procurement solutions across All
+            India.
           </motion.p>
 
           {/* Action CTAs with Lighter WhatsApp Button */}
@@ -99,7 +114,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Key Compliance List */}
-          <motion.ul
+          {/* <motion.ul
             variants={fadeUp}
             initial="hidden"
             animate="visible"
@@ -117,7 +132,7 @@ export default function Hero() {
                 {item}
               </li>
             ))}
-          </motion.ul>
+          </motion.ul> */}
         </div>
 
         {/* RIGHT COLUMN: Interactive High-Tech Operations Showcase (Replacing broken image) */}
@@ -149,7 +164,7 @@ export default function Hero() {
               </div>
 
               {/* Active Deployment Highlights */}
-              <div className="mt-5 space-y-3.5">
+              <div className="mt-5 space-y-3.5 max-h-[280px] overflow-y-auto pr-2 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#7DD3FC]/50 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#00AEEF]/50">
                 {/* Aadhaar Deployment Card */}
                 <div className="p-3.5 rounded-xl bg-white/60 border border-[#7DD3FC]/50 flex items-start gap-3">
                   <div className="w-9 h-9 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
@@ -170,6 +185,26 @@ export default function Hero() {
                   </div>
                 </div>
 
+                {/* Aadhaar Deployment Card */}
+                <div className="p-3.5 rounded-xl bg-white/60 border border-[#7DD3FC]/50 flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <Fingerprint className="w-5 h-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
+                      <p className="text-xs font-bold text-[#10182C] truncate">
+                        Aadhaar Enrolment LWD Assam (Under Alankit)
+                      </p>
+                      <span className="self-start sm:self-auto text-[9px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                        Govt. Auth.
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-[#4B6179] mt-0.5">
+                      Enitre Assam
+                    </p>
+                  </div>
+                </div>
+
                 {/* Ayushman Bharat Card */}
                 <div className="p-3.5 rounded-xl bg-white/60 border border-[#7DD3FC]/50 flex items-start gap-3">
                   <div className="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
@@ -178,7 +213,7 @@ export default function Hero() {
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
                       <p className="text-xs font-bold text-[#10182C] truncate">
-                        AB-PMJAY Ayushman Bharat Health Drive
+                        AB-PMJAY Ayushman Bharat
                       </p>
                       <span className="self-start sm:self-auto text-[9px] font-bold text-blue-300 bg-blue-500/10 px-1.5 py-0.5 rounded">
                         UTIITSL
@@ -198,17 +233,21 @@ export default function Hero() {
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
                       <p className="text-xs font-bold text-[#10182C] truncate">
-                        Banking DRA Recovery &amp; PNB Branch Enrolment
+                        Debt Recovery Agency
                       </p>
                       <span className="self-start sm:self-auto text-[9px] font-bold text-amber-300 bg-amber-500/10 px-1.5 py-0.5 rounded">
-                        DRA Certified
+                        ICICI BANK
                       </span>
                     </div>
                     <p className="text-[11px] text-[#4B6179] mt-0.5">
-                      Punjab National Bank branches across India • PL, CC, Business Loans
+                      Madhya Pradesh • PL, CC, Business Loans
                     </p>
                   </div>
                 </div>
+
+
+
+
               </div>
 
               {/* Bottom Metrics Bar */}

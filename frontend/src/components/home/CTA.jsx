@@ -30,7 +30,7 @@ export default function CTA() {
               <span className="text-[#00AEEF]">e-Governance</span> or Banking Services?
             </h2>
 
-            <p className="mt-4 text-xs sm:text-sm leading-relaxed text-[#B8C4D4]">
+            <p className="mt-4 text-xs sm:text-sm leading-relaxed text-gray-400">
               We write to you in proposal of Aadhaar generation camps, banking debt recovery, and government supply projects at your Gram Panchayats, schools, bank branches, and public premises.
             </p>
 

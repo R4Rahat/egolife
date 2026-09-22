@@ -40,7 +40,7 @@ export default function ContactInfo() {
               <div>
                 <span className="text-[#4B6179] block text-[10px] uppercase font-bold">Address</span>
                 <span className="font-semibold text-[#10182C] leading-relaxed block mt-0.5">
-                  Entire Northeast Region
+                  Paikan Part II, P.O, P.S-Krishnai, Dist-Goalpara (Assam), Pin-783126
                 </span>
               </div>
             </div>

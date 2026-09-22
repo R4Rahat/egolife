@@ -4,16 +4,16 @@ import { CheckCircle2, MapPin, Building, Calendar, Layers } from "lucide-react";
 export default function CompanyStory() {
   const storyPoints = [
     {
-      title: "Pioneering Civic Tech Since 2011",
-      desc: "Founded in Lucknow, eGoLife began with a single mission: to simplify government-to-citizen (G2C) and government-to-business (G2B) interactions through robust digital engineering.",
+      title: "Technology",
+      desc: "Providing reliable, accessible and innovative solutions for individuals, businesses, institutions and government-related projects.",
     },
     {
-      title: "State & Municipal Empowerments",
-      desc: "We have partnered directly with municipal corporations, urban local bodies (ULBs), and state undertakings across Uttar Pradesh and India to modernize civic infrastructure.",
+      title: "Trust",
+      desc: "Building a trusted ecosystem that makes essential services simpler, faster and more accessible.",
     },
     {
-      title: "Turnkey Digital Transformation",
-      desc: "From complex database architectures and GIS mapping to citizen mobile apps and automated payment gateways, our full-lifecycle engineering ensures zero public downtime.",
+      title: "Transparency & Service",
+      desc: "Simplifying everyday processes by bringing multiple essential services together through a professional platform.",
     },
   ];
 
@@ -32,15 +32,15 @@ export default function CompanyStory() {
               OUR FOUNDATION & JOURNEY
             </p>
             <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#10182C] leading-tight">
-              A Legacy of Trust in Indian Public Administration
+              Multi-Service Technology Solutions
             </h2>
 
             <p className="mt-5 text-[#4B6179] text-base leading-relaxed">
-              Established in 2011, <strong className="text-[#10182C]">eGoLife Governance Private Limited</strong> is a premier technology and systems integration enterprise based in Lucknow, Uttar Pradesh. Over the past decade and a half, we have evolved from an agile IT consultancy into a recognized institution delivering large-scale e-governance systems.
+              Established in 2021 and headquartered in Goalpara, Assam, <strong className="text-[#10182C]">Egolife Egovernance Private Limited</strong> is a technology-driven, multi-service company focused on delivering reliable, accessible and innovative solutions for individuals, businesses, institutions and government-related projects.
             </p>
 
             <p className="mt-4 text-[#4B6179] text-base leading-relaxed">
-              We specialize in engineering high-reliability software architectures tailored to the stringent security, scalability, and audit compliance demands of public departments. Whether digitizing municipal tax assessments, powering urban water utility billings, or deploying citizen grievance redressal platforms, our work impacts millions of citizens daily.
+              Our approach is built around Technology, Trust, Transparency and Service. We aim to simplify everyday processes by bringing multiple essential services together through a professional and technology-enabled platform.
             </p>
 
             {/* Core Pillars List */}
@@ -66,10 +66,10 @@ export default function CompanyStory() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-5">
-            <div className="relative rounded-2xl bg-gradient-to-br from-[#E0F2FE] to-[#172647] p-8 text-[#10182C] shadow-xl shadow-[#0D1629]/10 overflow-hidden">
-              {/* Decorative background circle */}
-              <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-[#00AEEF]/30 rounded-full blur-2xl pointer-events-none" />
-              <div className="absolute -left-10 -top-10 w-40 h-40 bg-[#F58220]/20 rounded-full blur-2xl pointer-events-none" />
+            <div className="relative rounded-2xl bg-[#E0F2FE] p-8 text-[#10182C] shadow-2xl overflow-hidden">
+              {/* Decorative background glows */}
+              <div className="pointer-events-none absolute -left-24 -top-24 h-[300px] w-[300px] rounded-full bg-[#F58220]/15 blur-[80px]" />
+              <div className="pointer-events-none absolute -right-24 top-0 h-[280px] w-[280px] rounded-full bg-[#00AEEF]/30 blur-[90px]" />
 
               <div className="relative z-10">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-[#7DD3FC]/60 text-[11px] font-semibold tracking-wider uppercase text-[#00AEEF]">
@@ -77,11 +77,11 @@ export default function CompanyStory() {
                 </div>
 
                 <h3 className="mt-4 text-xl font-extrabold text-[#10182C]">
-                  eGoLife Governance Private Limited
+                  Egolife Egovernance Private Limited
                 </h3>
 
                 <p className="mt-2 text-xs text-[#4B6179] leading-relaxed">
-                  Incorporated under the Companies Act, dedicated to e-Governance, Enterprise Software Engineering, and Citizen Portal Development.
+                  Incorporated under the Companies Act, providing multi-service digital, financial, and business support solutions.
                 </p>
 
                 <div className="mt-6 space-y-4 pt-6 border-t border-[#7DD3FC]/50 text-xs">
@@ -89,7 +89,7 @@ export default function CompanyStory() {
                     <Calendar className="w-4 h-4 text-[#00AEEF] shrink-0" />
                     <div>
                       <span className="text-[#4B6179] block text-[11px]">Year of Inception</span>
-                      <span className="font-semibold text-[#10182C]">2011 (15+ Years Active)</span>
+                      <span className="font-semibold text-[#10182C]">2021</span>
                     </div>
                   </div>
 
@@ -98,7 +98,7 @@ export default function CompanyStory() {
                     <div>
                       <span className="text-[#4B6179] block text-[11px]">Corporate Office</span>
                       <span className="font-semibold text-[#10182C]">
-                        Vikrant Khand, Gomti Nagar, Lucknow – 226010, UP
+                        Paikan Part II, P.O, P.S-Krishnai, Dist-Goalpara (Assam), Pin-783126
                       </span>
                     </div>
                   </div>
@@ -106,9 +106,9 @@ export default function CompanyStory() {
                   <div className="flex items-center gap-3">
                     <Building className="w-4 h-4 text-[#00AEEF] shrink-0" />
                     <div>
-                      <span className="text-[#4B6179] block text-[11px]">Key Empanelments</span>
+                      <span className="text-[#4B6179] block text-[11px]">Key Authorizations</span>
                       <span className="font-semibold text-[#10182C]">
-                        UPLC, UPDESCO, MSME, RCUES
+                        Govt. Authorized Agency, UTIITSL, DRA Certified
                       </span>
                     </div>
                   </div>
@@ -116,9 +116,9 @@ export default function CompanyStory() {
                   <div className="flex items-center gap-3">
                     <Layers className="w-4 h-4 text-[#00AEEF] shrink-0" />
                     <div>
-                      <span className="text-[#4B6179] block text-[11px]">Focus Sectors</span>
+                      <span className="text-[#4B6179] block text-[11px]">Service Areas</span>
                       <span className="font-semibold text-[#10182C]">
-                        Municipalities, Smart Cities, Revenue, Citizen Portals
+                        Pan India
                       </span>
                     </div>
                   </div>
@@ -128,9 +128,9 @@ export default function CompanyStory() {
                 <div className="mt-6 rounded-xl bg-white/60 border border-[#7DD3FC]/50 p-3.5 flex items-center justify-between">
                   <div>
                     <p className="text-[10px] uppercase font-bold tracking-wider text-[#00AEEF]">
-                      Proven Execution
+                      Active Reach
                     </p>
-                    <p className="text-sm font-bold text-[#10182C] mt-0.5">80+ Government Projects</p>
+                    <p className="text-sm font-bold text-[#10182C] mt-0.5">Pan India Delivery</p>
                   </div>
                   <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-full bg-[#16A34A]/20 text-[#4ADE80] text-[11px] font-semibold border border-[#16A34A]/30">
                     Active Deployments

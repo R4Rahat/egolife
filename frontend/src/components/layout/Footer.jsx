@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
@@ -7,379 +8,177 @@ import {
 } from "react-icons/fa6";
 
 const quickLinks = [
-  "About",
-  "Services",
-  "Government",
-  "Industries",
-  "Case Studies",
-  "Careers",
-  "Contact",
-  "Sitemap",
-  "Support",
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Partner", href: "/partner" },
+  { name: "Industries", href: "/industries" },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "Careers", href: "/careers" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const registrations = [
-  "Established 2011",
-  "UPLC Registered (2012)",
-  "UPDESCO Empanelled (2016)",
-  "MSME Registered (2018)",
-  "RCUES Empanelled (2024)",
+  "Govt. Authorized Agency",
+  "UTIITSL Authorized Vendor",
+  "DRA Certified Recovery Agents",
+  "Pan India Service Delivery",
+  "Established 2021",
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#E0F2FE] text-[#10182C]">
-      {/* ========================================= */}
-      {/* MAIN FOOTER                               */}
-      {/* ========================================= */}
+    <footer className="bg-[#0B1121] text-white relative overflow-hidden pt-16">
+      {/* Background ambient glow */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#00AEEF]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#F58220]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="mx-auto max-w-[1180px] px-6 py-12 sm:px-8 lg:py-14">
-        <div
-          className="
-            grid
-            grid-cols-1
-            gap-10
-            sm:grid-cols-2
-            lg:grid-cols-[2.1fr_1fr_1.35fr_1.25fr]
-            lg:gap-12
-          ">
-          {/* ========================================= */}
-          {/* COMPANY                                   */}
-          {/* ========================================= */}
-
-          <div>
-            {/* Logo */}
-            <a href="/" className="inline-flex items-center">
+      {/* Main Footer Content */}
+      <div className="mx-auto max-w-[1220px] px-6 pb-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+          
+          {/* Brand & Description (Col Span 4) */}
+          <div className="lg:col-span-4">
+            <Link to="/" className="inline-block">
               <img
-                src="/images/logo/egolife-logo.png"
-                alt="eGoLife Governance Private Limited"
-                className="h-auto w-[145px] object-contain"
+                src="/logo.png"
+                alt="Egolife Egovernance Private Limited"
+                className="h-12 w-auto object-contain"
               />
-            </a>
+            </Link>
 
-            {/* Description */}
-            <p
-              className="
-                mt-5
-                max-w-[300px]
-                text-[10px]
-                leading-[1.65]
-                text-[#8997AA]
-              ">
-              Trusted technology partner delivering enterprise software,
-              eGovernance platforms, GIS, mobile and cloud solutions for
-              Government and businesses across India.
+            <p className="mt-6 text-sm leading-relaxed text-[#94A3B8] max-w-sm">
+              Egolife Egovernance Private Limited is a technology-driven, multi-service company focused on delivering reliable, accessible, and innovative solutions for individuals, businesses, institutions, and government-related projects.
             </p>
 
             {/* Social Icons */}
-            <div className="mt-5 flex items-center gap-2">
-              {/* Facebook */}
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="
-                  flex
-                  h-7
-                  w-7
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-[#172238]
-                  text-[#8190A5]
-                  transition-all
-                  duration-200
-                  hover:bg-[#00AEEF]
-                  hover:text-white
-                ">
-                <FaFacebookF size={11} />
-              </a>
-
-              {/* Instagram */}
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="
-                  flex
-                  h-7
-                  w-7
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-[#172238]
-                  text-[#8190A5]
-                  transition-all
-                  duration-200
-                  hover:bg-[#00AEEF]
-                  hover:text-white
-                ">
-                <FaInstagram size={12} />
-              </a>
-
-              {/* LinkedIn */}
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="
-                  flex
-                  h-7
-                  w-7
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-[#172238]
-                  text-[#8190A5]
-                  transition-all
-                  duration-200
-                  hover:bg-[#00AEEF]
-                  hover:text-white
-                ">
-                <FaLinkedinIn size={11} />
-              </a>
-
-              {/* X / Twitter */}
-              <a
-                href="#"
-                aria-label="X"
-                className="
-                  flex
-                  h-7
-                  w-7
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-[#172238]
-                  text-[#8190A5]
-                  transition-all
-                  duration-200
-                  hover:bg-[#00AEEF]
-                  hover:text-white
-                ">
-                <FaXTwitter size={11} />
-              </a>
+            <div className="mt-8 flex items-center gap-3">
+              {[
+                { Icon: FaFacebookF, label: "Facebook" },
+                { Icon: FaInstagram, label: "Instagram" },
+                { Icon: FaLinkedinIn, label: "LinkedIn" },
+                { Icon: FaXTwitter, label: "X / Twitter" },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href="#"
+                  aria-label={social.label}
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-[#1E293B] text-[#94A3B8] transition-all hover:bg-[#00AEEF] hover:text-white hover:-translate-y-1"
+                >
+                  <social.Icon size={14} />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* ========================================= */}
-          {/* QUICK LINKS                               */}
-          {/* ========================================= */}
-
-          <div>
-            <h3
-              className="
-                mb-4
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.5px]
-                text-[#10182C]
-              ">
+          {/* Quick Links (Col Span 2) */}
+          <div className="lg:col-span-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6">
               Quick Links
             </h3>
-
-            <ul className="space-y-2">
+            <ul className="space-y-3.5">
               {quickLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="
-                      text-[9px]
-                      text-[#8B98AA]
-                      transition-colors
-                      duration-200
-                      hover:text-white
-                    ">
-                    {link}
-                  </a>
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="group flex items-center text-sm text-[#94A3B8] transition-colors hover:text-[#00AEEF]"
+                  >
+                    <ArrowRight className="w-3.5 h-3.5 mr-2 opacity-0 -ml-5 transition-all group-hover:opacity-100 group-hover:ml-0 text-[#00AEEF]" />
+                    <span>{link.name}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* ========================================= */}
-          {/* REGISTRATIONS                             */}
-          {/* ========================================= */}
-
-          <div>
-            <h3
-              className="
-                mb-4
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.5px]
-                text-[#10182C]
-              ">
-              Registrations
+          {/* Registrations (Col Span 3) */}
+          <div className="lg:col-span-3">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6">
+              Authorizations
             </h3>
-
-            <ul className="space-y-2">
+            <ul className="space-y-3.5">
               {registrations.map((registration) => (
-                <li key={registration}>
-                  <span
-                    className="
-                      text-[9px]
-                      leading-4
-                      text-[#8B98AA]
-                    ">
-                    {registration}
-                  </span>
+                <li key={registration} className="flex items-start gap-2 text-sm text-[#94A3B8]">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#F58220] mt-1.5 shrink-0" />
+                  <span>{registration}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* ========================================= */}
-          {/* CONTACT                                   */}
-          {/* ========================================= */}
-
-          <div>
-            <h3
-              className="
-                mb-4
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.5px]
-                text-[#10182C]
-              ">
-              Contact
+          {/* Contact (Col Span 3) */}
+          <div className="lg:col-span-3">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6">
+              Contact Us
             </h3>
+            
+            <div className="space-y-4">
+              {/* Address */}
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#1E293B] flex items-center justify-center shrink-0">
+                  <MapPin size={14} className="text-[#00AEEF]" />
+                </div>
+                <p className="text-sm leading-relaxed text-[#94A3B8] pt-1">
+                  Paikan Part II, P.O, P.S-Krishnai, <br />
+                  Dist-Goalpara (Assam), <br />
+                  Pin-783126
+                </p>
+              </div>
 
-            {/* Address */}
-            <div className="flex gap-2">
-              <MapPin
-                size={12}
-                strokeWidth={1.7}
-                className="mt-[2px] shrink-0 text-[#00AEEF]"
-              />
-
-              <p
-                className="
-                  text-[9px]
-                  leading-[1.55]
-                  text-[#8B98AA]
-                ">
-                1/09, Vikrant Khand, Gomti Nagar
-                <br />
-                Lucknow – 226010
-                <br />
-                Uttar Pradesh, India
-              </p>
-            </div>
-
-            {/* Phone */}
-            <div className="mt-3 flex gap-2">
-              <Phone
-                size={12}
-                strokeWidth={1.7}
-                className="mt-[1px] shrink-0 text-[#00AEEF]"
-              />
-
-              <div className="text-[9px] leading-[1.55]">
+              {/* Phone */}
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#1E293B] flex items-center justify-center shrink-0">
+                  <Phone size={14} className="text-[#00AEEF]" />
+                </div>
                 <a
-                  href="tel:+919044095988"
-                  className="
-                    block
-                    text-[#8B98AA]
-                    transition-colors
-                    hover:text-white
-                  ">
-                  Sales: 9044095988 / 77
-                </a>
-
-                <a
-                  href="tel:+919040959922"
-                  className="
-                    block
-                    text-[#8B98AA]
-                    transition-colors
-                    hover:text-white
-                  ">
-                  Support: 9040959922
+                  href="tel:+916002172653"
+                  className="text-sm text-[#94A3B8] transition-colors hover:text-[#00AEEF]"
+                >
+                  +91 6002172653
                 </a>
               </div>
-            </div>
 
-            {/* Email */}
-            <div className="mt-3 flex gap-2">
-              <Mail
-                size={12}
-                strokeWidth={1.7}
-                className="mt-[1px] shrink-0 text-[#00AEEF]"
-              />
-
-              <a
-                href="mailto:info@egolife.in"
-                className="
-                  text-[9px]
-                  text-[#8B98AA]
-                  transition-colors
-                  hover:text-white
-                ">
-                info@egolife.in
-              </a>
+              {/* Email */}
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#1E293B] flex items-center justify-center shrink-0">
+                  <Mail size={14} className="text-[#00AEEF]" />
+                </div>
+                <div className="flex flex-col text-sm">
+                  <a
+                    href="mailto:info@egolife.in"
+                    className="text-[#94A3B8] transition-colors hover:text-[#00AEEF]"
+                  >
+                    info@egolife.in
+                  </a>
+                  <a
+                    href="mailto:egolifemd@gmail.com"
+                    className="text-[#94A3B8] transition-colors hover:text-[#00AEEF]"
+                  >
+                    egolifemd@gmail.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
 
-      {/* ========================================= */}
-      {/* BOTTOM BAR                                */}
-      {/* ========================================= */}
-
-      <div className="border-t border-[#202C40]">
-        <div
-          className="
-            mx-auto
-            flex
-            max-w-[1180px]
-            flex-col
-            items-center
-            justify-between
-            gap-3
-            px-6
-            py-4
-            sm:px-8
-            md:flex-row
-          ">
-          {/* Copyright */}
-          <p className="text-[8px] text-[#63738A]">
-            © {new Date().getFullYear()} eGoLife Governance Private Limited. All
-            rights reserved.
+      {/* Bottom Bar */}
+      <div className="border-t border-[#1E293B] bg-[#020617]">
+        <div className="mx-auto max-w-[1220px] px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-[#64748B]">
+            © {new Date().getFullYear()} Egolife Egovernance Private Limited. All rights reserved.
           </p>
-
-          {/* Legal Links */}
-          <div className="flex items-center gap-5">
-            <a
-              href="#"
-              className="
-                text-[8px]
-                text-[#63738A]
-                transition-colors
-                hover:text-white
-              ">
+          
+          <div className="flex items-center gap-6">
+            <a href="#" className="text-xs text-[#64748B] transition-colors hover:text-white">
               Privacy Policy
             </a>
-
-            <a
-              href="#"
-              className="
-                text-[8px]
-                text-[#63738A]
-                transition-colors
-                hover:text-white
-              ">
-              Terms
+            <a href="#" className="text-xs text-[#64748B] transition-colors hover:text-white">
+              Terms of Service
             </a>
-
-            <a
-              href="#"
-              className="
-                text-[8px]
-                text-[#63738A]
-                transition-colors
-                hover:text-white
-              ">
+            <a href="#" className="text-xs text-[#64748B] transition-colors hover:text-white">
               Sitemap
             </a>
           </div>
