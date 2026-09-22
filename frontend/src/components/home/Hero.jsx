@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-[#00AEEF]/6 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[380px] h-[280px] bg-[#F58220]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-[1220px] mx-auto px-6 pt-12 pb-20 lg:pt-16 lg:pb-24 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="max-w-[1220px] mx-auto px-4 sm:px-6 pt-10 sm:pt-12 pb-16 sm:pb-20 lg:pt-16 lg:pb-24 grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
         {/* LEFT COLUMN */}
         <div>
           {/* Official Badges */}
@@ -53,7 +53,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             custom={1}
-            className="mt-6 text-[38px] sm:text-[46px] lg:text-[52px] font-extrabold leading-[1.08] tracking-tight text-[#10182C]">
+            className="mt-6 text-[32px] sm:text-[46px] lg:text-[52px] font-extrabold leading-[1.1] sm:leading-[1.08] tracking-tight text-[#10182C]">
             Empowering Public Governance &amp;{" "}
             <span className="bg-gradient-to-r from-[#00AEEF] via-[#38BDF8] to-[#F58220] bg-clip-text text-transparent">
               Citizen Infrastructure
@@ -75,10 +75,10 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             custom={3}
-            className="mt-8 flex flex-wrap items-center gap-4">
+            className="mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 rounded-full bg-[#00AEEF] text-white px-6 py-3 text-sm font-semibold transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5">
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-2 rounded-full bg-[#00AEEF] text-white px-6 py-3 text-sm font-semibold transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5">
               <span>Explore Services</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -88,7 +88,7 @@ export default function Hero() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#EBFBF0] px-5 py-3 text-sm font-medium text-[#15803D] border border-[#86EFAC]/70 shadow-xs transition-all hover:bg-[#DCFCE7] hover:border-[#4ADE80] hover:text-[#0D632E] hover:shadow-sm">
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-2 rounded-full bg-[#EBFBF0] px-5 py-3 text-sm font-medium text-[#15803D] border border-[#86EFAC]/70 shadow-xs transition-all hover:bg-[#DCFCE7] hover:border-[#4ADE80] hover:text-[#0D632E] hover:shadow-sm">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -133,12 +133,12 @@ export default function Hero() {
 
             <div className="relative z-10">
               {/* Terminal Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-[#7DD3FC]/50">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-4 border-b border-[#7DD3FC]/50 gap-3 sm:gap-0">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500" />
                   <div className="w-3 h-3 rounded-full bg-amber-500" />
                   <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="ml-2 text-xs font-mono text-[#4B6179]">
+                  <span className="ml-2 text-[11px] sm:text-xs font-mono text-[#4B6179] truncate max-w-[200px] sm:max-w-none">
                     egolife-governance-hub // India-network
                   </span>
                 </div>
@@ -155,13 +155,13 @@ export default function Hero() {
                   <div className="w-9 h-9 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
                     <Fingerprint className="w-5 h-5" />
                   </div>
-                  <div className="min-w-0">
-                    <div className="flex items-center justify-between gap-2">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
                       <p className="text-xs font-bold text-[#10182C] truncate">
                         Aadhaar Enrolment Consortium
                       </p>
-                      <span className="text-[9px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
-
+                      <span className="self-start sm:self-auto text-[9px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                        Govt. Auth.
                       </span>
                     </div>
                     <p className="text-[11px] text-[#4B6179] mt-0.5">
@@ -175,12 +175,12 @@ export default function Hero() {
                   <div className="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
                     <HeartPulse className="w-5 h-5" />
                   </div>
-                  <div className="min-w-0">
-                    <div className="flex items-center justify-between gap-2">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
                       <p className="text-xs font-bold text-[#10182C] truncate">
                         AB-PMJAY Ayushman Bharat Health Drive
                       </p>
-                      <span className="text-[9px] font-bold text-blue-300 bg-blue-500/10 px-1.5 py-0.5 rounded">
+                      <span className="self-start sm:self-auto text-[9px] font-bold text-blue-300 bg-blue-500/10 px-1.5 py-0.5 rounded">
                         UTIITSL
                       </span>
                     </div>
@@ -195,12 +195,12 @@ export default function Hero() {
                   <div className="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
                     <Landmark className="w-5 h-5" />
                   </div>
-                  <div className="min-w-0">
-                    <div className="flex items-center justify-between gap-2">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
                       <p className="text-xs font-bold text-[#10182C] truncate">
                         Banking DRA Recovery &amp; PNB Branch Enrolment
                       </p>
-                      <span className="text-[9px] font-bold text-amber-300 bg-amber-500/10 px-1.5 py-0.5 rounded">
+                      <span className="self-start sm:self-auto text-[9px] font-bold text-amber-300 bg-amber-500/10 px-1.5 py-0.5 rounded">
                         DRA Certified
                       </span>
                     </div>
@@ -212,18 +212,18 @@ export default function Hero() {
               </div>
 
               {/* Bottom Metrics Bar */}
-              <div className="mt-5 pt-4 border-t border-[#7DD3FC]/50 grid grid-cols-3 gap-3 text-center">
-                <div className="p-2 rounded-lg bg-white/60">
-                  <p className="text-lg font-black text-[#00AEEF]">11+ Yrs</p>
-                  <p className="text-[10px] text-[#4B6179]">IT Industry</p>
+              <div className="mt-5 pt-4 border-t border-[#7DD3FC]/50 grid grid-cols-3 gap-2 sm:gap-3 text-center">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/60">
+                  <p className="text-sm sm:text-lg font-black text-[#00AEEF]">11+ Yrs</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#4B6179]">IT Industry</p>
                 </div>
-                <div className="p-2 rounded-lg bg-white/60">
-                  <p className="text-lg font-black text-[#10182C]">200+</p>
-                  <p className="text-[10px] text-[#4B6179]">Services Offered</p>
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/60">
+                  <p className="text-sm sm:text-lg font-black text-[#10182C]">200+</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#4B6179]">Services Offered</p>
                 </div>
-                <div className="p-2 rounded-lg bg-white/60">
-                  <p className="text-lg font-black text-emerald-400">SERVICES</p>
-                  <p className="text-[10px] text-[#4B6179]">Across PAN India</p>
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/60">
+                  <p className="text-sm sm:text-lg font-black text-emerald-400">SERVICES</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#4B6179]">Across PAN India</p>
                 </div>
               </div>
             </div>
