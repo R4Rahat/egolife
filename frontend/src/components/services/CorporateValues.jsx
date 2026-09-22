@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Award, Users, MessageSquareHeart, Sparkles, TrendingUp, History } from "lucide-react";
+import {
+  Award,
+  Users,
+  MessageSquareHeart,
+  Sparkles,
+  TrendingUp,
+  History,
+} from "lucide-react";
 
 export default function CorporateValues() {
   const setValues = [
@@ -39,7 +46,8 @@ export default function CorporateValues() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6">
+            className="lg:col-span-6"
+          >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00AEEF]/8 border border-[#00AEEF]/15 text-[#00AEEF] text-xs font-semibold uppercase tracking-wider mb-4">
               <History className="w-3.5 h-3.5" />
               <span>CORPORATE EVOLUTION</span>
@@ -50,7 +58,18 @@ export default function CorporateValues() {
             </h2>
 
             <p className="mt-5 text-[#4B6179] text-sm sm:text-base leading-relaxed">
-              Our enterprise was originally established in the year <strong className="text-[#10182C]">2016</strong> as a sole proprietorship firm under the name <strong className="text-[#10182C]">M.S SALES SERVICE</strong>. Through relentless perseverance, deep field experience, and unwavering client trust, the organization was formally incorporated in <strong className="text-[#10182C]">2021</strong> as <strong className="text-[#00AEEF]">EGOLIFE EGOVERNANCE PRIVATE LIMITED</strong>.
+              Our enterprise was originally established in the year{" "}
+              <strong className="text-[#10182C]">2016</strong> as a sole
+              proprietorship firm under the name{" "}
+              <strong className="text-[#10182C]">M.S SALES SERVICE</strong>.
+              Through relentless perseverance, deep field experience, and
+              unwavering client trust, the organization was formally
+              incorporated in <strong className="text-[#10182C]">2021</strong>{" "}
+              as{" "}
+              <strong className="text-[#00AEEF]">
+                EGOLIFE EGOVERNANCE PRIVATE LIMITED
+              </strong>
+              .
             </p>
 
             <div className="mt-8 space-y-4">
@@ -59,9 +78,12 @@ export default function CorporateValues() {
                   16
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#10182C]">2016: M.S SALES SERVICE</h4>
+                  <h4 className="text-sm font-bold text-[#10182C]">
+                    2016: M.S SALES SERVICE
+                  </h4>
                   <p className="text-xs text-[#5B6F84] mt-0.5 leading-relaxed">
-                    Commenced commercial supply, IT accessories, and field administrative assistance across Western India.
+                    Commenced commercial supply, IT accessories, and field
+                    administrative assistance across Western India.
                   </p>
                 </div>
               </div>
@@ -71,9 +93,12 @@ export default function CorporateValues() {
                   21
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#10182C]">2021: Incorporated as Private Limited</h4>
+                  <h4 className="text-sm font-bold text-[#10182C]">
+                    2021: Incorporated as Private Limited
+                  </h4>
                   <p className="text-xs text-[#5B6F84] mt-0.5 leading-relaxed">
-                    CIN: U72900AS2021PTC022087. Expanded into official Aadhaar Consortium, UTIITSL vendor, and banking DRA recovery.
+                    Expanded into official Aadhaar Consortium, UTIITSL vendor,
+                    and banking DRA recovery.
                   </p>
                 </div>
               </div>
@@ -86,7 +111,8 @@ export default function CorporateValues() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6">
+            className="lg:col-span-6"
+          >
             <div className="bg-white rounded-2xl border border-[#E2E8F0] p-7 sm:p-8 shadow-sm">
               <span className="text-xs font-bold uppercase tracking-widest text-[#F58220]">
                 OUR GUIDING COMPASS
@@ -99,13 +125,18 @@ export default function CorporateValues() {
                 {setValues.map((v, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl border border-[#EDF2F7] hover:border-[#00AEEF]/25 transition-all bg-[#FAFCFF] flex items-start gap-3.5">
+                    className="p-4 rounded-xl border border-[#EDF2F7] hover:border-[#00AEEF]/25 transition-all bg-[#FAFCFF] flex items-start gap-3.5"
+                  >
                     <div className="w-10 h-10 rounded-lg bg-white border border-[#E2E8F0] text-[#00AEEF] flex items-center justify-center shrink-0 shadow-xs">
                       <v.icon className="w-5 h-5 text-[#00AEEF]" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#10182C]">{v.title}</h4>
-                      <p className="text-xs text-[#526880] mt-1 leading-relaxed">{v.desc}</p>
+                      <h4 className="text-sm font-bold text-[#10182C]">
+                        {v.title}
+                      </h4>
+                      <p className="text-xs text-[#526880] mt-1 leading-relaxed">
+                        {v.desc}
+                      </p>
                     </div>
                   </div>
                 ))}

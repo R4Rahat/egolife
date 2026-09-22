@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ChevronRight, ShieldCheck, MapPin, Phone, Mail, Clock } from "lucide-react";
+import {
+  ChevronRight,
+  ShieldCheck,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+} from "lucide-react";
 
 export default function ContactHero() {
   return (
@@ -16,7 +23,8 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="flex items-center gap-2 text-xs font-medium text-[#687A90] mb-6">
+          className="flex items-center gap-2 text-xs font-medium text-[#687A90] mb-6"
+        >
           <Link to="/" className="hover:text-[#00AEEF] transition-colors">
             Home
           </Link>
@@ -30,14 +38,11 @@ export default function ContactHero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.08 }}
-            className="flex flex-wrap items-center gap-2.5 mb-5">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00AEEF]/8 border border-[#00AEEF]/15 text-[#00AEEF] text-xs font-semibold">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#00AEEF]" />
-              <span>CIN: U72900AS2021PTC022087</span>
-            </div>
+            className="flex flex-wrap items-center gap-2.5 mb-5"
+          >
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F58220]/10 border border-[#F58220]/20 text-[#D96B0F] text-xs font-semibold">
               <MapPin className="w-3.5 h-3.5 text-[#F58220]" />
-              <span>Goalpara, India</span>
+              <span>Entire NorthEast, India</span>
             </div>
           </motion.div>
 
@@ -45,7 +50,8 @@ export default function ContactHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#10182C] tracking-tight leading-[1.15]">
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#10182C] tracking-tight leading-[1.15]"
+          >
             Connect with Our{" "}
             <span className="bg-gradient-to-r from-[#00AEEF] via-[#38BDF8] to-[#F58220] bg-clip-text text-transparent">
               Public Sector &amp; Technical
@@ -57,8 +63,11 @@ export default function ContactHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.16 }}
-            className="mt-5 text-base sm:text-lg text-[#4B6179] leading-relaxed">
-            Whether you represent a District Administration, Gram Panchayat, Bank Branch, Educational Institution, or Commercial Enterprise, we are ready to deploy certified teams and reliable technology.
+            className="mt-5 text-base sm:text-lg text-[#4B6179] leading-relaxed"
+          >
+            Whether you represent a District Administration, Gram Panchayat,
+            Bank Branch, Educational Institution, or Commercial Enterprise, we
+            are ready to deploy certified teams and reliable technology.
           </motion.p>
         </div>
 
@@ -67,14 +76,20 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.22 }}
-          className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-[#E8EEF5]">
+          className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-[#E8EEF5]"
+        >
           <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E4EAF2] shadow-xs">
             <div className="w-10 h-10 rounded-lg bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0">
               <Phone className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-[11px] uppercase font-bold text-[#64748B]">Official Helpline</p>
-              <a href="tel:+916002172653" className="text-sm font-bold text-[#10182C] hover:text-[#00AEEF] transition-colors">
+              <p className="text-[11px] uppercase font-bold text-[#64748B]">
+                Official Helpline
+              </p>
+              <a
+                href="tel:+916002172653"
+                className="text-sm font-bold text-[#10182C] hover:text-[#00AEEF] transition-colors"
+              >
                 +91 6002172653
               </a>
             </div>
@@ -85,8 +100,13 @@ export default function ContactHero() {
               <Mail className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-[11px] uppercase font-bold text-[#64748B]">Email Correspondence</p>
-              <a href="mailto:egolifemd@gmail.com" className="text-sm font-bold text-[#10182C] hover:text-[#00AEEF] transition-colors">
+              <p className="text-[11px] uppercase font-bold text-[#64748B]">
+                Email Correspondence
+              </p>
+              <a
+                href="mailto:egolifemd@gmail.com"
+                className="text-sm font-bold text-[#10182C] hover:text-[#00AEEF] transition-colors"
+              >
                 egolifemd@gmail.com
               </a>
             </div>
@@ -97,8 +117,12 @@ export default function ContactHero() {
               <Clock className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-[11px] uppercase font-bold text-[#64748B]">Operational Hours</p>
-              <p className="text-sm font-bold text-[#10182C]">Mon – Sat: 9:30 AM – 6:30 PM</p>
+              <p className="text-[11px] uppercase font-bold text-[#64748B]">
+                Operational Hours
+              </p>
+              <p className="text-sm font-bold text-[#10182C]">
+                Mon – Sat: 9:30 AM – 6:30 PM
+              </p>
             </div>
           </div>
         </motion.div>
