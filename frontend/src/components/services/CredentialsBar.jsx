@@ -1,12 +1,14 @@
-import { Shield, CheckCircle2, Award, Landmark, Building, Cpu } from "lucide-react";
+import {
+  Shield,
+  CheckCircle2,
+  Award,
+  Landmark,
+  Building,
+  Cpu,
+} from "lucide-react";
 
 export default function CredentialsBar() {
   const credentials = [
-    {
-      icon: Shield,
-      label: "CIN: U72900AS2021PTC022087",
-      sub: "Registrar of Companies",
-    },
     {
       icon: Award,
       label: "Government Authorized Agency",
@@ -41,11 +43,16 @@ export default function CredentialsBar() {
           {credentials.map((cred, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2.5 p-2 rounded-lg bg-white/60 border border-white/8 hover:bg-white/10 transition-colors">
+              className="flex items-center gap-2.5 p-2 rounded-lg bg-white/60 border border-white/8 hover:bg-white/10 transition-colors"
+            >
               <cred.icon className="w-4 h-4 text-[#00AEEF] shrink-0" />
               <div className="min-w-0">
-                <p className="text-[11px] font-bold text-[#10182C] truncate">{cred.label}</p>
-                <p className="text-[10px] text-[#8EA2BC] truncate">{cred.sub}</p>
+                <p className="text-[11px] font-bold text-[#10182C] truncate">
+                  {cred.label}
+                </p>
+                <p className="text-[10px] text-[#8EA2BC] truncate">
+                  {cred.sub}
+                </p>
               </div>
             </div>
           ))}
