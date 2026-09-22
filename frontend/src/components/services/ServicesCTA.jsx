@@ -14,12 +14,12 @@ const WHATSAPP_URL = "https://wa.me/916002172653";
 
 export default function ServicesCTA() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1220px] mx-auto px-6">
-        <div className="relative rounded-3xl bg-gradient-to-br from-[#E0F2FE] via-[#7ec3dc] to-[#45a3e1] p-8 sm:p-12 md:p-16 text-[#10182C] overflow-hidden shadow-2xl">
+    <section className="py-12 sm:py-20 bg-white">
+      <div className="max-w-[1220px] mx-auto px-4 sm:px-6">
+        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#E0F2FE] via-[#7ec3dc] to-[#45a3e1] p-6 sm:p-12 md:p-16 text-[#10182C] overflow-hidden shadow-2xl">
           {/* Background Decorative Glows */}
-          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#00AEEF]/30 blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-80 h-80 rounded-full bg-[#F58220]/20 blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 sm:w-80 h-48 sm:h-80 rounded-full bg-[#00AEEF]/30 blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 sm:w-80 h-48 sm:h-80 rounded-full bg-[#F58220]/20 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl">
             <motion.div
@@ -27,7 +27,7 @@ export default function ServicesCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-[#7DD3FC]/60 text-xs font-semibold uppercase tracking-wider text-[#00AEEF] mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-[#7DD3FC]/60 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#00AEEF] mb-4 sm:mb-6"
             >
               INVITING PUBLIC & ENTERPRISE PROPOSALS
             </motion.div>
@@ -37,7 +37,7 @@ export default function ServicesCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
+              className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-snug sm:leading-tight"
             >
               Deploy Certified Aadhaar, Banking & Healthcare Services in Your
               District
@@ -48,7 +48,7 @@ export default function ServicesCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="mt-4 text-sm sm:text-base text-[#4B6179] leading-relaxed max-w-2xl"
+              className="mt-3 sm:mt-4 text-xs sm:text-base text-[#4B6179] leading-relaxed max-w-2xl"
             >
               We write to you in proposal of Aadhaar generation camps, banking
               recovery, and government supply projects at your Gram Panchayats,
@@ -62,11 +62,11 @@ export default function ServicesCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-8 flex flex-wrap items-center gap-4"
+              className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4"
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#00AEEF] px-6 py-3 text-sm font-semibold text-[#10182C] transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                className="inline-flex justify-center items-center gap-2 rounded-full bg-[#00AEEF] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-[#10182C] transition-all hover:bg-[#1E3A80] shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
                 <span>Submit Service Request</span>
                 <ArrowRight className="w-4 h-4" />
@@ -77,9 +77,9 @@ export default function ServicesCTA() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#EBFBF0] px-5 py-3 text-sm font-medium text-[#15803D] border border-[#86EFAC]/70 shadow-xs transition-all hover:bg-[#DCFCE7] hover:border-[#4ADE80] hover:text-[#0D632E] hover:shadow-sm"
+                className="inline-flex justify-center items-center gap-2 rounded-full bg-[#EBFBF0] px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-[#15803D] border border-[#86EFAC]/70 shadow-xs transition-all hover:bg-[#DCFCE7] hover:border-[#4ADE80] hover:text-[#0D632E] hover:shadow-sm"
               >
-                <span className="relative flex h-2 w-2">
+                <span className="relative flex h-2 w-2 shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
@@ -89,7 +89,7 @@ export default function ServicesCTA() {
             </motion.div>
 
             {/* Direct Official Contact Bar from Document */}
-            <div className="mt-12 pt-8 border-t border-[#7DD3FC]/50 grid grid-cols-1 sm:grid-cols-3 gap-5 text-xs text-[#4B6179]">
+            <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#7DD3FC]/50 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 text-xs text-[#4B6179]">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
                 <div>

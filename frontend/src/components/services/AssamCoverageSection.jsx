@@ -78,8 +78,8 @@ export default function IndiaCoverageSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1220px] mx-auto px-6">
+    <section className="py-12 sm:py-20 bg-white">
+      <div className="max-w-[1220px] mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F58220]">
@@ -94,7 +94,7 @@ export default function IndiaCoverageSection() {
         </div>
 
         {/* District Grid */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
           {districtList.map((dist, idx) => (
             <motion.div
               key={dist.name}
@@ -102,12 +102,12 @@ export default function IndiaCoverageSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.04 }}
-              className="p-5 rounded-xl border border-[#E2E8F0] bg-[#FAFCFF] hover:bg-white hover:border-[#00AEEF]/30 hover:shadow-md transition-all group flex flex-col justify-between">
+              className="p-4 sm:p-5 rounded-xl border border-[#E2E8F0] bg-[#FAFCFF] hover:bg-white hover:border-[#00AEEF]/30 hover:shadow-md transition-all group flex flex-col justify-between">
               <div>
-                <div className="flex items-start justify-between gap-2 mb-3">
+                <div className="flex items-start justify-between gap-2 mb-2.5 sm:mb-3">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4 text-[#F58220] shrink-0 group-hover:scale-110 transition-transform" />
-                    <h3 className="text-base font-bold text-[#10182C] group-hover:text-[#00AEEF] transition-colors">
+                    <h3 className="text-sm sm:text-base font-bold text-[#10182C] group-hover:text-[#00AEEF] transition-colors">
                       {dist.name}
                     </h3>
                   </div>
@@ -116,7 +116,7 @@ export default function IndiaCoverageSection() {
                   </span>
                 </div>
 
-                <p className="text-xs text-[#64748B] font-medium mb-3">{dist.type}</p>
+                <p className="text-xs text-[#64748B] font-medium mb-2.5 sm:mb-3">{dist.type}</p>
 
                 <ul className="space-y-1.5 text-xs text-[#334155]">
                   {dist.projects.map((proj, pIdx) => (
@@ -137,16 +137,16 @@ export default function IndiaCoverageSection() {
         </div>
 
         {/* Registered Office Callout Banner */}
-        <div className="mt-10 rounded-2xl bg-gradient-to-r from-[#00AEEF]/8 via-[#F2F6FC] to-[#F58220]/8 border border-[#00AEEF]/15 p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-[#00AEEF] text-white flex items-center justify-center shrink-0 shadow-sm">
-              <Building2 className="w-6 h-6" />
+        <div className="mt-8 sm:mt-10 rounded-2xl bg-gradient-to-r from-[#00AEEF]/8 via-[#F2F6FC] to-[#F58220]/8 border border-[#00AEEF]/15 p-4 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#00AEEF] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-[#00AEEF]">
+              <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#00AEEF]">
                 REGISTERED CORPORATE HEADQUARTERS
               </p>
-              <h4 className="text-base font-extrabold text-[#10182C] mt-0.5">
+              <h4 className="text-sm sm:text-base font-extrabold text-[#10182C] mt-0.5">
                 Paikan Part II, P.O & P.S - Krishnai, Dist - Goalpara (India), PIN - 783126
               </h4>
               <p className="text-xs text-[#526880] mt-0.5">
@@ -155,7 +155,7 @@ export default function IndiaCoverageSection() {
             </div>
           </div>
 
-          <span className="shrink-0 px-4 py-2 rounded-full bg-white border border-[#00AEEF]/20 text-xs font-bold text-[#00AEEF] shadow-xs">
+          <span className="shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white border border-[#00AEEF]/20 text-[11px] sm:text-xs font-bold text-[#00AEEF] shadow-xs">
             India State Jurisdiction
           </span>
         </div>

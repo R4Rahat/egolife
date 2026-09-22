@@ -37,9 +37,9 @@ export default function CorporateValues() {
   ];
 
   return (
-    <section className="py-20 bg-[#F8FAFC] border-y border-[#EAEEF4]">
-      <div className="max-w-[1220px] mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section className="py-12 sm:py-20 bg-[#F8FAFC] border-y border-[#EAEEF4]">
+      <div className="max-w-[1220px] mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           {/* Left Column: Corporate Evolution from 2016 to 2021 */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -57,7 +57,7 @@ export default function CorporateValues() {
               From Grassroots Beginnings to an Accredited State Partner
             </h2>
 
-            <p className="mt-5 text-[#4B6179] text-sm sm:text-base leading-relaxed">
+            <p className="mt-4 sm:mt-5 text-[#4B6179] text-sm sm:text-base leading-relaxed">
               Our enterprise was originally established in the year{" "}
               <strong className="text-[#10182C]">2016</strong> as a sole
               proprietorship firm under the name{" "}
@@ -72,13 +72,13 @@ export default function CorporateValues() {
               .
             </p>
 
-            <div className="mt-8 space-y-4">
-              <div className="p-4 rounded-xl bg-white border border-[#E2E8F0] shadow-xs flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-lg bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 font-extrabold text-sm">
+            <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E2E8F0] shadow-xs flex items-start gap-3 sm:gap-3.5">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 font-extrabold text-xs sm:text-sm">
                   16
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#10182C]">
+                  <h4 className="text-xs sm:text-sm font-bold text-[#10182C]">
                     2016: M.S SALES SERVICE
                   </h4>
                   <p className="text-xs text-[#5B6F84] mt-0.5 leading-relaxed">
@@ -88,12 +88,12 @@ export default function CorporateValues() {
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white border border-[#E2E8F0] shadow-xs flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-lg bg-[#F58220]/10 text-[#F58220] flex items-center justify-center shrink-0 font-extrabold text-sm">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E2E8F0] shadow-xs flex items-start gap-3 sm:gap-3.5">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#F58220]/10 text-[#F58220] flex items-center justify-center shrink-0 font-extrabold text-xs sm:text-sm">
                   21
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#10182C]">
+                  <h4 className="text-xs sm:text-sm font-bold text-[#10182C]">
                     2021: Incorporated as Private Limited
                   </h4>
                   <p className="text-xs text-[#5B6F84] mt-0.5 leading-relaxed">
@@ -113,25 +113,25 @@ export default function CorporateValues() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-6"
           >
-            <div className="bg-white rounded-2xl border border-[#E2E8F0] p-7 sm:p-8 shadow-sm">
+            <div className="bg-white rounded-2xl border border-[#E2E8F0] p-5 sm:p-8 shadow-sm">
               <span className="text-xs font-bold uppercase tracking-widest text-[#F58220]">
                 OUR GUIDING COMPASS
               </span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#10182C] mt-1 mb-6">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#10182C] mt-1 mb-4 sm:mb-6">
                 Our Set Values & Operational Focus
               </h3>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {setValues.map((v, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl border border-[#EDF2F7] hover:border-[#00AEEF]/25 transition-all bg-[#FAFCFF] flex items-start gap-3.5"
+                    className="p-3.5 sm:p-4 rounded-xl border border-[#EDF2F7] hover:border-[#00AEEF]/25 transition-all bg-[#FAFCFF] flex items-start gap-3 sm:gap-3.5"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-white border border-[#E2E8F0] text-[#00AEEF] flex items-center justify-center shrink-0 shadow-xs">
-                      <v.icon className="w-5 h-5 text-[#00AEEF]" />
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white border border-[#E2E8F0] text-[#00AEEF] flex items-center justify-center shrink-0 shadow-xs">
+                      <v.icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#00AEEF]" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#10182C]">
+                      <h4 className="text-xs sm:text-sm font-bold text-[#10182C]">
                         {v.title}
                       </h4>
                       <p className="text-xs text-[#526880] mt-1 leading-relaxed">

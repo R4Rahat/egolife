@@ -332,19 +332,18 @@ export default function Hero() {
           <div
             className="
               relative
-              w-[calc(100%-10px)]
-              sm:w-full
+              w-full
               max-w-full
               min-w-0
               mx-auto
               box-border
-              rounded-xl
+              rounded-2xl
               sm:rounded-3xl
               bg-gradient-to-br
               from-[#E0F2FE]
               via-[#BAE6FD]
               to-[#7DD3FC]
-              p-2
+              p-3.5
               sm:p-6
               lg:p-8
               text-[#10182C]
@@ -361,8 +360,8 @@ export default function Hero() {
                 absolute
                 top-0
                 right-0
-                w-32
-                h-32
+                w-40
+                h-40
                 sm:w-64
                 sm:h-64
                 bg-[#00AEEF]/30
@@ -377,8 +376,8 @@ export default function Hero() {
                 absolute
                 bottom-0
                 left-0
-                w-32
-                h-32
+                w-40
+                h-40
                 sm:w-64
                 sm:h-64
                 bg-[#F58220]/20
@@ -399,7 +398,7 @@ export default function Hero() {
                   items-start
                   sm:items-center
                   justify-between
-                  pb-2.5
+                  pb-3
                   sm:pb-4
                   border-b
                   border-[#7DD3FC]/50
@@ -412,22 +411,22 @@ export default function Hero() {
 
                 <div className="flex items-center gap-1.5 min-w-0 max-w-full">
 
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500 shrink-0" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500 shrink-0" />
 
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-amber-500 shrink-0" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-500 shrink-0" />
 
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-emerald-500 shrink-0" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500 shrink-0" />
 
                   <span
                     className="
-                      ml-1
-                      text-[7px]
+                      ml-1.5
+                      text-[9px]
                       sm:text-[11px]
                       lg:text-xs
                       font-mono
                       text-[#4B6179]
                       truncate
-                      max-w-[120px]
+                      max-w-[150px]
                       sm:max-w-[200px]
                       lg:max-w-none
                     "
@@ -439,17 +438,16 @@ export default function Hero() {
 
                 <span
                   className="
-                    text-[6px]
+                    text-[8px]
                     sm:text-[10px]
                     uppercase
                     font-bold
-                    px-1.5
-                    sm:px-2
+                    px-2
                     py-0.5
                     sm:py-1
                     rounded
                     bg-emerald-500/20
-                    text-emerald-700
+                    text-emerald-800
                     border
                     border-emerald-500/30
                     flex
@@ -458,7 +456,7 @@ export default function Hero() {
                     shrink-0
                   "
                 >
-                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-500 animate-ping" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
 
                   Live Operations
                 </span>
@@ -468,15 +466,15 @@ export default function Hero() {
               {/* CARDS */}
               <div
                 className="
-                  mt-2.5
+                  mt-3
                   sm:mt-5
-                  space-y-1.5
+                  space-y-2.5
                   sm:space-y-3.5
-                  max-h-[225px]
-                  sm:max-h-[280px]
+                  max-h-[280px]
+                  sm:max-h-[320px]
                   overflow-y-auto
                   overflow-x-hidden
-                  pr-0.5
+                  pr-1
                   sm:pr-2
                 "
               >
@@ -487,54 +485,52 @@ export default function Hero() {
                     w-full
                     min-w-0
                     box-border
-                    p-2
+                    p-2.5
                     sm:p-3.5
-                    rounded-lg
-                    sm:rounded-xl
+                    rounded-xl
                     bg-white/60
                     border
                     border-[#7DD3FC]/50
                     flex
                     items-start
-                    gap-1.5
+                    gap-2
                     sm:gap-3
                   "
                 >
 
                   <div
                     className="
-                      w-6
-                      h-6
+                      w-7
+                      h-7
                       sm:w-9
                       sm:h-9
-                      rounded-md
-                      sm:rounded-lg
+                      rounded-lg
                       bg-blue-500/20
-                      text-blue-400
+                      text-blue-500
                       flex
                       items-center
                       justify-center
                       shrink-0
                     "
                   >
-                    <Fingerprint className="w-3 h-3 sm:w-5 sm:h-5" />
+                    <Fingerprint className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                   </div>
 
                   <div className="min-w-0 flex-1 overflow-hidden">
 
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
 
-                      <p className="text-[8px] sm:text-xs font-bold text-[#10182C] leading-3.5 sm:leading-4 break-words">
+                      <p className="text-[10px] sm:text-xs font-bold text-[#10182C] leading-tight break-words">
                         Aadhaar Enrolment Consortium
                       </p>
 
-                      <span className="self-start text-[6px] sm:text-[9px] font-bold text-emerald-600 bg-emerald-500/10 px-1 py-0.5 rounded shrink-0">
+                      <span className="self-start text-[8px] sm:text-[9px] font-bold text-emerald-700 bg-emerald-500/15 px-1.5 py-0.5 rounded shrink-0">
                         Govt. Auth.
                       </span>
 
                     </div>
 
-                    <p className="text-[7px] sm:text-[11px] text-[#4B6179] mt-0.5 leading-3 sm:leading-4 break-words">
+                    <p className="text-[9px] sm:text-[11px] text-[#4B6179] mt-0.5 leading-normal break-words">
                       Baksa, Udalguri, Tamulpur, Barpeta, Goalpara, Nalbari
                     </p>
 
@@ -547,54 +543,52 @@ export default function Hero() {
                     w-full
                     min-w-0
                     box-border
-                    p-2
+                    p-2.5
                     sm:p-3.5
-                    rounded-lg
-                    sm:rounded-xl
+                    rounded-xl
                     bg-white/60
                     border
                     border-[#7DD3FC]/50
                     flex
                     items-start
-                    gap-1.5
+                    gap-2
                     sm:gap-3
                   "
                 >
 
                   <div
                     className="
-                      w-6
-                      h-6
+                      w-7
+                      h-7
                       sm:w-9
                       sm:h-9
-                      rounded-md
-                      sm:rounded-lg
+                      rounded-lg
                       bg-blue-500/20
-                      text-blue-400
+                      text-blue-500
                       flex
                       items-center
                       justify-center
                       shrink-0
                     "
                   >
-                    <Fingerprint className="w-3 h-3 sm:w-5 sm:h-5" />
+                    <Fingerprint className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                   </div>
 
                   <div className="min-w-0 flex-1 overflow-hidden">
 
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
 
-                      <p className="text-[8px] sm:text-xs font-bold text-[#10182C] leading-3.5 sm:leading-4 break-words">
+                      <p className="text-[10px] sm:text-xs font-bold text-[#10182C] leading-tight break-words">
                         Aadhaar Enrolment LWD Assam (Under Alankit)
                       </p>
 
-                      <span className="self-start text-[6px] sm:text-[9px] font-bold text-emerald-600 bg-emerald-500/10 px-1 py-0.5 rounded shrink-0">
+                      <span className="self-start text-[8px] sm:text-[9px] font-bold text-emerald-700 bg-emerald-500/15 px-1.5 py-0.5 rounded shrink-0">
                         Govt. Auth.
                       </span>
 
                     </div>
 
-                    <p className="text-[7px] sm:text-[11px] text-[#4B6179] mt-0.5 leading-3 sm:leading-4">
+                    <p className="text-[9px] sm:text-[11px] text-[#4B6179] mt-0.5 leading-normal">
                       Enitre Assam
                     </p>
 
@@ -607,54 +601,52 @@ export default function Hero() {
                     w-full
                     min-w-0
                     box-border
-                    p-2
+                    p-2.5
                     sm:p-3.5
-                    rounded-lg
-                    sm:rounded-xl
+                    rounded-xl
                     bg-white/60
                     border
                     border-[#7DD3FC]/50
                     flex
                     items-start
-                    gap-1.5
+                    gap-2
                     sm:gap-3
                   "
                 >
 
                   <div
                     className="
-                      w-6
-                      h-6
+                      w-7
+                      h-7
                       sm:w-9
                       sm:h-9
-                      rounded-md
-                      sm:rounded-lg
+                      rounded-lg
                       bg-emerald-500/20
-                      text-emerald-400
+                      text-emerald-500
                       flex
                       items-center
                       justify-center
                       shrink-0
                     "
                   >
-                    <HeartPulse className="w-3 h-3 sm:w-5 sm:h-5" />
+                    <HeartPulse className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                   </div>
 
                   <div className="min-w-0 flex-1 overflow-hidden">
 
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
 
-                      <p className="text-[8px] sm:text-xs font-bold text-[#10182C] leading-3.5 sm:leading-4 break-words">
+                      <p className="text-[10px] sm:text-xs font-bold text-[#10182C] leading-tight break-words">
                         AB-PMJAY Ayushman Bharat
                       </p>
 
-                      <span className="self-start text-[6px] sm:text-[9px] font-bold text-blue-600 bg-blue-500/10 px-1 py-0.5 rounded shrink-0">
+                      <span className="self-start text-[8px] sm:text-[9px] font-bold text-blue-700 bg-blue-500/15 px-1.5 py-0.5 rounded shrink-0">
                         UTIITSL
                       </span>
 
                     </div>
 
-                    <p className="text-[7px] sm:text-[11px] text-[#4B6179] mt-0.5 leading-3 sm:leading-4 break-words">
+                    <p className="text-[9px] sm:text-[11px] text-[#4B6179] mt-0.5 leading-normal break-words">
                       Goalpara, Bongaigaon, Dhubri, Karimganj, Hailakandi, Cachar
                     </p>
 
@@ -667,54 +659,52 @@ export default function Hero() {
                     w-full
                     min-w-0
                     box-border
-                    p-2
+                    p-2.5
                     sm:p-3.5
-                    rounded-lg
-                    sm:rounded-xl
+                    rounded-xl
                     bg-white/60
                     border
                     border-[#7DD3FC]/50
                     flex
                     items-start
-                    gap-1.5
+                    gap-2
                     sm:gap-3
                   "
                 >
 
                   <div
                     className="
-                      w-6
-                      h-6
+                      w-7
+                      h-7
                       sm:w-9
                       sm:h-9
-                      rounded-md
-                      sm:rounded-lg
+                      rounded-lg
                       bg-amber-500/20
-                      text-amber-400
+                      text-amber-500
                       flex
                       items-center
                       justify-center
                       shrink-0
                     "
                   >
-                    <Landmark className="w-3 h-3 sm:w-5 sm:h-5" />
+                    <Landmark className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                   </div>
 
                   <div className="min-w-0 flex-1 overflow-hidden">
 
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
 
-                      <p className="text-[8px] sm:text-xs font-bold text-[#10182C] leading-3.5 sm:leading-4">
+                      <p className="text-[10px] sm:text-xs font-bold text-[#10182C] leading-tight">
                         Debt Recovery Agency
                       </p>
 
-                      <span className="self-start text-[6px] sm:text-[9px] font-bold text-amber-600 bg-amber-500/10 px-1 py-0.5 rounded shrink-0">
+                      <span className="self-start text-[8px] sm:text-[9px] font-bold text-amber-700 bg-amber-500/15 px-1.5 py-0.5 rounded shrink-0">
                         ICICI BANK
                       </span>
 
                     </div>
 
-                    <p className="text-[7px] sm:text-[11px] text-[#4B6179] mt-0.5 leading-3 sm:leading-4">
+                    <p className="text-[9px] sm:text-[11px] text-[#4B6179] mt-0.5 leading-normal">
                       Madhya Pradesh • PL, CC, Business Loans
                     </p>
 
@@ -726,51 +716,51 @@ export default function Hero() {
               {/* METRICS */}
               <div
                 className="
-                  mt-2.5
+                  mt-3
                   sm:mt-5
-                  pt-2.5
+                  pt-3
                   sm:pt-4
                   border-t
                   border-[#7DD3FC]/50
                   grid
                   grid-cols-3
-                  gap-1
+                  gap-1.5
                   sm:gap-3
                   text-center
                 "
               >
 
-                <div className="p-1 sm:p-2 rounded-md sm:rounded-lg bg-white/60 min-w-0 overflow-hidden">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/60 min-w-0 overflow-hidden">
 
-                  <p className="text-[9px] sm:text-lg font-black text-[#00AEEF] truncate">
+                  <p className="text-[11px] sm:text-lg font-black text-[#00AEEF] truncate">
                     11+ Yrs
                   </p>
 
-                  <p className="text-[6px] sm:text-[10px] text-[#4B6179] truncate">
+                  <p className="text-[8px] sm:text-[10px] text-[#4B6179] truncate">
                     IT Industry
                   </p>
 
                 </div>
 
-                <div className="p-1 sm:p-2 rounded-md sm:rounded-lg bg-white/60 min-w-0 overflow-hidden">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/60 min-w-0 overflow-hidden">
 
-                  <p className="text-[9px] sm:text-lg font-black text-[#10182C] truncate">
+                  <p className="text-[11px] sm:text-lg font-black text-[#10182C] truncate">
                     200+
                   </p>
 
-                  <p className="text-[6px] sm:text-[10px] text-[#4B6179] truncate">
+                  <p className="text-[8px] sm:text-[10px] text-[#4B6179] truncate">
                     Services Offered
                   </p>
 
                 </div>
 
-                <div className="p-1 sm:p-2 rounded-md sm:rounded-lg bg-white/60 min-w-0 overflow-hidden">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/60 min-w-0 overflow-hidden">
 
-                  <p className="text-[8px] sm:text-lg font-black text-emerald-500 truncate">
+                  <p className="text-[10px] sm:text-lg font-black text-emerald-600 truncate">
                     SERVICES
                   </p>
 
-                  <p className="text-[6px] sm:text-[10px] text-[#4B6179] truncate">
+                  <p className="text-[8px] sm:text-[10px] text-[#4B6179] truncate">
                     Across PAN India
                   </p>
 
