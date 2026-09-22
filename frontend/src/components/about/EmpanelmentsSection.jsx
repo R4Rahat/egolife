@@ -42,8 +42,8 @@ export default function EmpanelmentsSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1220px] mx-auto px-6">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="max-w-[1220px] mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F58220]">
             INSTITUTIONAL ACCREDITATIONS
@@ -51,12 +51,12 @@ export default function EmpanelmentsSection() {
           <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#10182C]">
             Empanelled & Registered with Apex Public Bodies
           </h2>
-          <p className="mt-3 text-[#5A6F87] text-sm sm:text-base">
+          <p className="mt-3 text-[#5A6F87] text-xs sm:text-base">
             Our empanelments attest to our rigorous financial, technical, and cybersecurity compliance standards.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {empanelments.map((item, idx) => (
             <motion.div
               key={item.title}
@@ -64,32 +64,32 @@ export default function EmpanelmentsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="rounded-2xl border border-[#E4EAF2] p-7 bg-gradient-to-b from-white to-[#F9FAFC] hover:shadow-lg hover:border-[#00AEEF]/30 transition-all group flex flex-col justify-between">
+              className="rounded-2xl border border-[#E4EAF2] p-5 sm:p-7 bg-gradient-to-b from-white to-[#F9FAFC] hover:shadow-lg hover:border-[#00AEEF]/30 transition-all group flex flex-col justify-between">
               <div>
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                      <item.icon className="w-6 h-6" />
+                <div className="flex flex-col xs:flex-row xs:items-start justify-between gap-3 sm:gap-4">
+                  <div className="flex items-center gap-3 sm:gap-3.5">
+                    <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <item.icon className="w-5 sm:w-6 h-5 sm:h-6" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-[#10182C] group-hover:text-[#00AEEF] transition-colors">
+                      <h3 className="text-base sm:text-lg font-bold text-[#10182C] group-hover:text-[#00AEEF] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-xs text-[#526880] font-medium">{item.sub}</p>
                     </div>
                   </div>
 
-                  <span className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F2F5FB] text-[#00AEEF] border border-[#00AEEF]/15">
+                  <span className="w-fit shrink-0 px-2.5 py-1 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-[#F2F5FB] text-[#00AEEF] border border-[#00AEEF]/15">
                     {item.badge}
                   </span>
                 </div>
 
-                <p className="mt-5 text-sm text-[#4E6278] leading-relaxed">
+                <p className="mt-4 sm:mt-5 text-xs sm:text-sm text-[#4E6278] leading-relaxed">
                   {item.desc}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#EDF2F7] flex items-center justify-between text-xs">
+              <div className="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-[#EDF2F7] flex items-center justify-between text-xs">
                 <span className="font-semibold text-[#10182C] flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-[#16A34A]" />
                   Verified Compliance
@@ -106,8 +106,8 @@ export default function EmpanelmentsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-10 rounded-xl bg-[#F4F7FC] border border-[#DFE6F2] p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-3">
+          className="mt-8 sm:mt-10 rounded-xl bg-[#F4F7FC] border border-[#DFE6F2] p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-[#00AEEF] text-white flex items-center justify-center shrink-0 text-xs font-bold">
               ✓
             </div>

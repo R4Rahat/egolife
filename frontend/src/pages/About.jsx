@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AboutHero from "../components/about/AboutHero.jsx";
 import CompanyStory from "../components/about/CompanyStory.jsx";
 import CoreValues from "../components/about/CoreValues.jsx";
+import EmpanelmentsSection from "../components/about/EmpanelmentsSection.jsx";
 import MilestonesTimeline from "../components/about/MilestonesTimeline.jsx";
 import LeadershipProfile from "../components/about/LeadershipProfile.jsx";
 import ManagementDirectory from "../components/about/ManagementDirectory.jsx";
@@ -25,6 +26,7 @@ export default function About() {
       <AboutHero />
       <CompanyStory />
       <CoreValues />
+      <EmpanelmentsSection />
       <MilestonesTimeline />
       <LeadershipProfile />
       <ManagementDirectory />
