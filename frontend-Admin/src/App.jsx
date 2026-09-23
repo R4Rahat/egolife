@@ -1,11 +1,11 @@
-import "./App.css";
+// App.jsx
+
+import AppRouter from "./routes/AppRouter.jsx";
+
+
 
 function App() {
-  return (
-    <main className="bg-(--color-background)">
-      <h1 className="">asdfghjkl</h1>
-    </main>
-  );
+  return <AppRouter />;
 }
 
 export default App;

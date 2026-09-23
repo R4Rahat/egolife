@@ -5,7 +5,7 @@ import { JWT_EXPIRES_IN, JWT_SECRET } from "../../config/env.js";
 export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    if (!username || !password) {
+    if (!email || !password) {
       return res.status(400).json({
         success: false,
         message: "Username and password are required",
@@ -46,6 +46,7 @@ export const login = async (req, res, next) => {
     });
   } catch (error) {
     next(error);
+    console.log(error)
   }
 };
 
