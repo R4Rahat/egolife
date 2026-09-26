@@ -11,7 +11,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-white border-b p-4 flex justify-between">
+      {/* <header className="bg-white border-b p-4 flex justify-between">
         <h1 className="font-bold">Admin Panel</h1>
 
         <div className="flex items-center gap-4">
@@ -32,7 +32,7 @@ export default function Dashboard() {
 
       <main className="p-6">
         <h2 className="text-2xl font-bold">Dashboard</h2>
-      </main>
+      </main> */}
     </div>
   );
 }

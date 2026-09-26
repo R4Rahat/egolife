@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import ProtectedRoute from "./ProtectedRoutes";
 import AppPage from "../pages/AppPage";
 import NotificationsPage from "../pages/NotificationsPage";
+import AdminLayout from "../layouts/AdminLayout";
 
 
 
@@ -14,9 +15,11 @@ export default function AppRouter() {
         <Route path="/admin/login" element={<Login />} />
 
         <Route element={<ProtectedRoute />}>
+         <Route element={<AdminLayout />}>
           <Route path="/admin" element={<Dashboard />} />
           <Route path="/admin/apps" element={<AppPage />} />
           <Route path="/admin/notifications" element={<NotificationsPage />} />
+         </Route>
         </Route>
       </Routes>
     </BrowserRouter>
