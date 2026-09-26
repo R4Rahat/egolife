@@ -1,8 +1,12 @@
+import { Navigate, useNavigate } from "react-router-dom";
 import useAuthStore from "../store/authStore";
 
 export default function Dashboard() {
   const admin = useAuthStore((state) => state.admin);
   const logout = useAuthStore((state) => state.logout);
+
+  const navigate = useNavigate();
+  const handleClick = () => navigate("/admin/apps");
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -11,6 +15,8 @@ export default function Dashboard() {
 
         <div className="flex items-center gap-4">
           <span>{admin?.name}</span>
+
+          <button onClick={handleClick}>Apps</button>
 
           <button
             onClick={logout}

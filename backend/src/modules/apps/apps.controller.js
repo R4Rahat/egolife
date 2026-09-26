@@ -36,18 +36,22 @@ export const getApps = async (req, res) => {
 };
 
 export const downloadApp = async (req, res) => {
-  const app = await App.findById(req.params.id);
+  try {
+    const app = await App.findById(req.params.id);
 
-  if (!app) {
-    return res.status(404).json({
-      error: "Not found",
-    });
+    if (!app) {
+      return res.status(404).json({
+        error: "Not found",
+      });
+    }
+
+    res.download(
+      path.resolve(app.fileUrl),
+      `${app.name}-${app.version}${path.extname(app.fileUrl)}`,
+    );
+  } catch (error) {
+    console.error(error)
   }
-
-  res.download(
-    path.resolve(app.fileUrl),
-    `${app.name}-${app.version}${path.extname(app.fileUrl)}`,
-  );
 };
 
 export const updateApp = async (req, res) => {
