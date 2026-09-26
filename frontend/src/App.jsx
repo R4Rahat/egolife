@@ -3,6 +3,9 @@ import Navbar from "./components/layout/Navbar.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Services from "./pages/Services.jsx";
+import Notifications from "./pages/Notifications.jsx";
+import NotificationDetail from "./pages/NotificationDetail.jsx";
+import Apps from "./pages/Apps.jsx";
 import Contact from "./pages/Contact.jsx";
 import Footer from "./components/layout/Footer.jsx";
 
@@ -30,6 +33,9 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/notifications/:id" element={<NotificationDetail />} />
+          <Route path="/apps" element={<Apps />} />
           <Route
             path="/partner"
             element={<PagePlaceholder title="Become a Partner" />}

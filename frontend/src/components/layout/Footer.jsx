@@ -11,6 +11,8 @@ const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
+  { name: "Notifications", href: "/notifications" },
+  { name: "Apps & Downloads", href: "/apps" },
   { name: "Partner", href: "/partner" },
   { name: "Industries", href: "/industries" },
   { name: "Case Studies", href: "/case-studies" },
