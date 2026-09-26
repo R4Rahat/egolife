@@ -7,6 +7,7 @@ export default function Dashboard() {
 
   const navigate = useNavigate();
   const handleClick = () => navigate("/admin/apps");
+  const handleClick2 = () => navigate("/admin/notifications");
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -17,6 +18,8 @@ export default function Dashboard() {
           <span>{admin?.name}</span>
 
           <button onClick={handleClick}>Apps</button>
+
+          <button onClick={handleClick2}>Notification</button>
 
           <button
             onClick={logout}
