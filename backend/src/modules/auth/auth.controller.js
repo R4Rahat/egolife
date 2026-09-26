@@ -60,10 +60,9 @@ export const getMe = async (req, res) => {
 export const logout = (req, res) => {
   res.clearCookie("adminToken", {
     httpOnly: true,
-
-    secure: process.env.NODE_ENV === "production",
-
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    secure: true,
+    sameSite: "lax",
+    maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 
   res.status(200).json({

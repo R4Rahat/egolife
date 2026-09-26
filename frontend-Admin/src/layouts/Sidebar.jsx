@@ -40,14 +40,11 @@ export default function Sidebar({ open, onClose }) {
         {/* Logo */}
         <div className="flex h-16 items-center justify-between border-b border-blue-50 px-5">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 font-bold text-white">
-              A
-            </div>
-
-            <div>
-              <p className="text-sm font-bold text-gray-900">Admin Panel</p>
-              <p className="text-xs text-gray-400">Management</p>
-            </div>
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="flex h-16 items-center justify-between border-b border-blue-50 px-5 text-blue-400"
+            />
           </div>
 
           {/* Mobile close button */}
@@ -95,14 +92,14 @@ export default function Sidebar({ open, onClose }) {
         </nav>
 
         {/* Bottom section */}
-        {/* <div className="border-t border-blue-50 p-4">
+        <div className="border-t border-blue-50 p-4">
           <div className="rounded-xl bg-blue-50 p-3">
             <p className="text-xs font-medium text-blue-700">Admin account</p>
             <p className="mt-1 text-[11px] text-blue-500">
               Manage your application
             </p>
           </div>
-        </div> */}
+        </div>
       </aside>
     </>
   );

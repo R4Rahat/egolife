@@ -48,7 +48,7 @@ export default function Topbar({ onMenuClick }) {
         <div className="hidden h-7 w-px bg-gray-200 sm:block" />
 
         {/* Profile */}
-        <button className="flex items-center gap-2 rounded-xl p-1.5 transition hover:bg-gray-50">
+        {/* <button className="flex items-center gap-2 rounded-xl p-1.5 transition hover:bg-gray-50">
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
             A
           </div>
@@ -59,7 +59,7 @@ export default function Topbar({ onMenuClick }) {
           </div>
 
           <ChevronDown size={16} className="hidden text-gray-400 sm:block" />
-        </button>
+        </button> */}
       </div>
     </header>
   );

@@ -42,10 +42,13 @@ export default function Login() {
       <div className="relative w-full max-w-md">
         {/* Logo / Brand */}
         <div className="mb-6 text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-lg font-bold text-white shadow-sm">
-            A
+          <div className="flex  justify-center items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="flex h-16 items-center justify-between border-b border-blue-50 px-5 text-blue-400"
+            />
           </div>
-
           <h1 className="text-2xl font-bold text-gray-900">Admin Panel</h1>
 
           <p className="mt-1 text-sm text-gray-500">
@@ -78,7 +81,7 @@ export default function Login() {
           {/* Username */}
           <div className="mb-5">
             <label className="mb-2 block text-sm font-medium text-gray-700">
-              Username
+              Email
             </label>
 
             <div className="relative">
@@ -88,8 +91,8 @@ export default function Login() {
               />
 
               <input
-                type="text"
-                placeholder="Enter your username"
+                type="email"
+                placeholder="Enter your email"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
