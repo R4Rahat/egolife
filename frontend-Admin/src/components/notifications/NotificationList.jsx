@@ -1,5 +1,6 @@
-import useNotificationStore from "../../store/notificationStore";
+import { FileText } from "lucide-react";
 
+import useNotificationStore from "../../store/notificationStore";
 import NotificationCard from "./NotificationCard";
 
 export default function NotificationList() {
@@ -7,22 +8,24 @@ export default function NotificationList() {
 
   if (notifications.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-12 text-center">
-        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 text-xl">
-          📄
+      <div className="flex min-h-48 flex-col items-center justify-center rounded-xl border border-dashed border-blue-100 bg-blue-50/30 px-6 text-center">
+        <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-500">
+          <FileText size={23} />
         </div>
 
-        <h3 className="font-medium text-slate-900">No notifications</h3>
+        <h3 className="text-sm font-semibold text-gray-800">
+          No notifications
+        </h3>
 
-        <p className="mt-1 text-sm text-slate-500">
-          Create your first notification above.
+        <p className="mt-1 max-w-sm text-sm text-gray-500">
+          Create your first notification to publish a notice or document.
         </p>
       </div>
     );
   }
 
   return (
-    <div className="grid gap-4">
+    <div className="space-y-3">
       {notifications.map((notification) => (
         <NotificationCard key={notification._id} notification={notification} />
       ))}
