@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
   Calendar,
-  Building2,
   Download,
   Share2,
   Bell,
@@ -12,33 +11,41 @@ import {
   AlertTriangle,
   Globe,
   Database,
+  Clock,
 } from "lucide-react";
-import { fetchSingleNotification } from "../data/notificationsData";
+import { useNotificationStore } from "../store/useNotificationStore";
 
 export default function NotificationDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const [notification, setNotification] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [dataSource, setDataSource] = useState("local");
-  const [error, setError] = useState(null);
+  const {
+    currentNotification: notification,
+    loading,
+    error,
+    dataSource,
+    fetchNotificationById,
+    downloadNotification,
+  } = useNotificationStore();
 
   useEffect(() => {
-    async function loadData() {
-      setLoading(true);
-      try {
-        const res = await fetchSingleNotification(id);
-        setNotification(res.data);
-        setDataSource(res.source);
-      } catch (err) {
-        setError("Failed to load single notification details.");
-      } finally {
-        setLoading(false);
-      }
+    if (id) {
+      fetchNotificationById(id);
     }
-    loadData();
-  }, [id]);
+  }, [id, fetchNotificationById]);
+
+  const formatDate = (dateStr) => {
+    if (!dateStr) return "N/A";
+    try {
+      return new Date(dateStr).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+    } catch {
+      return dateStr;
+    }
+  };
 
   if (loading) {
     return (
@@ -55,7 +62,7 @@ export default function NotificationDetail() {
         <AlertTriangle className="w-12 h-12 text-amber-500 mb-3" />
         <h2 className="text-xl font-bold text-slate-800">Notification Not Found</h2>
         <p className="text-slate-500 text-sm mt-1 max-w-md">
-          The requested public circular or notification could not be retrieved from the server.
+          The requested notification could not be retrieved from the server.
         </p>
         <Link
           to="/notifications"
@@ -69,7 +76,7 @@ export default function NotificationDetail() {
 
   return (
     <div className="bg-[#F8FAFC] min-h-screen pb-24">
-      {/* Top Header Navigation */}
+      {/* Header Navigation */}
       <div className="bg-[#0B1121] text-white py-10 border-b border-slate-800">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between gap-4 mb-4">
@@ -83,7 +90,7 @@ export default function NotificationDetail() {
             {dataSource === "api" ? (
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
                 <Globe className="w-3.5 h-3.5 text-emerald-400" />
-                Live Single Notice API Data
+                Live Single Notice API
               </span>
             ) : (
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">
@@ -93,15 +100,16 @@ export default function NotificationDetail() {
             )}
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 mb-3">
-            {notification.isUrgent && (
-              <span className="inline-flex items-center gap-1 px-3 py-0.5 rounded-full bg-red-500/20 text-red-300 text-[11px] font-extrabold uppercase border border-red-400/40">
-                Urgent Notice
+          <div className="flex items-center gap-2 mb-3">
+            {notification.isActive ? (
+              <span className="px-3 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-extrabold uppercase border border-emerald-400/40">
+                Active Notice
+              </span>
+            ) : (
+              <span className="px-3 py-0.5 rounded-full bg-slate-800 text-slate-400 text-[11px] font-extrabold uppercase border border-slate-700">
+                Inactive / Archived
               </span>
             )}
-            <span className="px-3 py-0.5 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] text-[11px] font-extrabold uppercase border border-[#00AEEF]/40">
-              {notification.category}
-            </span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
@@ -111,52 +119,43 @@ export default function NotificationDetail() {
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-400 pt-4 border-t border-slate-800">
             <span className="flex items-center gap-1.5">
               <Calendar className="w-4 h-4 text-[#00AEEF]" />
-              Issuance Date: {notification.date}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Building2 className="w-4 h-4 text-[#F58220]" />
-              Authority: {notification.author}
+              Date: {formatDate(notification.createdAt)}
             </span>
           </div>
         </div>
       </div>
 
-      {/* Main Single Notice Body */}
+      {/* Main Content Body */}
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 mt-8">
-        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
-          {/* Executive Summary Box */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs">
+          
+          {/* Description Box */}
           <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 mb-8">
-            <p className="text-xs font-bold uppercase tracking-wider text-[#00AEEF] mb-1">
-              Notice Summary
+            <p className="text-xs font-bold uppercase tracking-wider text-[#00AEEF] mb-2">
+              Notice Description
             </p>
-            <p className="text-sm sm:text-base text-slate-800 font-medium leading-relaxed">
-              {notification.summary}
+            <p className="text-sm sm:text-base text-slate-800 font-normal leading-relaxed whitespace-pre-line">
+              {notification.description}
             </p>
           </div>
 
-          {/* Full Detailed Content */}
-          <div className="prose max-w-none text-slate-800 text-sm sm:text-base leading-relaxed whitespace-pre-line font-normal space-y-4">
-            {notification.content}
-          </div>
-
-          {/* Verification Callout */}
-          <div className="mt-10 pt-6 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+          {/* Verification Badge */}
+          <div className="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
             <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
             <span>
-              This is an authenticated official notice issued by Egolife Egovernance Private Limited Administration.
+              This is an official notice issued under standard administration guidelines.
             </span>
           </div>
 
-          {/* Action Bar / Download */}
+          {/* Action Bar / PDF Download */}
           <div className="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-            {notification.attachmentUrl ? (
-              <a
-                href={notification.attachmentUrl}
-                download
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold transition-all shadow-sm">
+            {notification.fileUrl ? (
+              <button
+                onClick={() => downloadNotification(notification.id || notification._id)}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold transition-all shadow-xs cursor-pointer">
                 <Download className="w-4 h-4" />
-                <span>Download Attached File ({notification.attachmentName || "Attachment.pdf"})</span>
-              </a>
+                <span>Download Attached PDF</span>
+              </button>
             ) : (
               <span className="text-xs text-slate-400">No attached file for this notification.</span>
             )}
