@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Upload, Image, FileArchive } from "lucide-react";
 
 import useAppStore from "../../store/appStore";
 
@@ -27,7 +28,6 @@ export default function AppForm() {
     formData.append("name", name);
     formData.append("version", version);
     formData.append("description", description);
-
     formData.append("appFile", appFile);
 
     if (icon) {
@@ -42,7 +42,6 @@ export default function AppForm() {
       setName("");
       setVersion("");
       setDescription("");
-
       setAppFile(null);
       setIcon(null);
 
@@ -55,71 +54,130 @@ export default function AppForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="rounded-xl border bg-white p-6 shadow-sm"
-    >
-      <h2 className="mb-5 text-lg font-semibold">Add Application</h2>
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Basic Information */}
+      <div className="grid gap-5 md:grid-cols-2">
+        {/* Name */}
+        <div>
+          <label className="mb-2 block text-sm font-medium text-gray-700">
+            Application name
+          </label>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        <input
-          type="text"
-          placeholder="Application name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          className="rounded-lg border p-3"
-        />
+          <input
+            type="text"
+            placeholder="e.g. My Desktop App"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-50"
+          />
+        </div>
 
-        <input
-          type="text"
-          placeholder="Version"
-          value={version}
-          onChange={(e) => setVersion(e.target.value)}
-          required
-          className="rounded-lg border p-3"
-        />
+        {/* Version */}
+        <div>
+          <label className="mb-2 block text-sm font-medium text-gray-700">
+            Version
+          </label>
+
+          <input
+            type="text"
+            placeholder="e.g. 1.0.0"
+            value={version}
+            onChange={(e) => setVersion(e.target.value)}
+            required
+            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-50"
+          />
+        </div>
       </div>
 
-      <textarea
-        placeholder="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        className="mt-4 w-full rounded-lg border p-3"
-        rows="3"
-      />
-
-      <div className="mt-4">
-        <label className="mb-2 block text-sm font-medium">
-          Application file
+      {/* Description */}
+      <div>
+        <label className="mb-2 block text-sm font-medium text-gray-700">
+          Description
         </label>
 
-        <input
-          type="file"
-          onChange={(e) => setAppFile(e.target.files[0])}
-          required
-          className="block w-full"
+        <textarea
+          placeholder="Describe the application..."
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          rows={4}
+          className="w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-50"
         />
       </div>
 
-      <div className="mt-4">
-        <label className="mb-2 block text-sm font-medium">Icon</label>
+      {/* Files */}
+      <div className="grid gap-5 md:grid-cols-2">
+        {/* Application File */}
+        <div>
+          <label className="mb-2 block text-sm font-medium text-gray-700">
+            Application file
+            <span className="ml-1 text-red-500">*</span>
+          </label>
 
-        <input
-          type="file"
-          accept="image/*"
-          onChange={(e) => setIcon(e.target.files[0])}
-          className="block w-full"
-        />
+          <label className="group flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 px-5 py-7 text-center transition hover:border-blue-300 hover:bg-blue-50/50">
+            <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+              <FileArchive size={21} />
+            </div>
+
+            <p className="text-sm font-medium text-gray-700">
+              {appFile ? appFile.name : "Choose application file"}
+            </p>
+
+            <p className="mt-1 text-xs text-gray-400">
+              Click to browse your files
+            </p>
+
+            <input
+              type="file"
+              onChange={(e) => setAppFile(e.target.files?.[0] || null)}
+              required
+              className="hidden"
+            />
+          </label>
+        </div>
+
+        {/* Icon */}
+        <div>
+          <label className="mb-2 block text-sm font-medium text-gray-700">
+            Application icon
+            <span className="ml-1 text-gray-400">(optional)</span>
+          </label>
+
+          <label className="group flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 px-5 py-7 text-center transition hover:border-blue-300 hover:bg-blue-50/50">
+            <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+              <Image size={21} />
+            </div>
+
+            <p className="max-w-full truncate text-sm font-medium text-gray-700">
+              {icon ? icon.name : "Choose application icon"}
+            </p>
+
+            <p className="mt-1 text-xs text-gray-400">
+              PNG, JPG, SVG or other image
+            </p>
+
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setIcon(e.target.files?.[0] || null)}
+              className="hidden"
+            />
+          </label>
+        </div>
       </div>
 
-      <button
-        type="submit"
-        disabled={submitting}
-        className="mt-6 rounded-lg bg-black px-5 py-3 text-white disabled:opacity-50"
-      >
-        {submitting ? "Uploading..." : "Upload Application"}
-      </button>
+      {/* Submit */}
+      <div className="flex justify-end border-t border-gray-100 pt-5">
+        <button
+          type="submit"
+          disabled={submitting}
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        >
+          <Upload size={17} />
+
+          {submitting ? "Uploading..." : "Upload Application"}
+        </button>
+      </div>
     </form>
   );
 }

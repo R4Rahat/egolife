@@ -39,25 +39,45 @@ app.use('/api/notifications', notificationRoutes);
 
 
 
-// Landing page
-const landingPagePath = path.join(__dirname, "../../frontend/dist") ;
-app.use(express.static(landingPagePath))
+// =======================
+// Landing Page
+// =======================
 
-app.get("/", (req, res)=>{
-    res.sendFile(
-        path.join(landingPagePath, "index.html")
-    )
-})
+const landingPagePath = path.join(
+  __dirname,
+  "../../frontend/dist"
+);
 
-// Admin panel
-const adminPanelPath = path.join(__dirname, '../../frontend-Admin/dist');
-app.use(express.static(adminPanelPath));
+app.use(express.static(landingPagePath));
 
-app.get("/admin", (req, res)=>{
-    res.sendFile(
-        path.join(adminPanelPath, "index.html")
-    )
-})
+app.get("/", (req, res) => {
+  res.sendFile(
+    path.join(landingPagePath, "index.html")
+  );
+});
+
+
+// =======================
+// Admin Panel
+// =======================
+
+const adminPanelPath = path.join(
+  __dirname,
+  "../../frontend-Admin/dist"
+);
+
+// Serve admin static files under /admin
+app.use(
+  "/admin",
+  express.static(adminPanelPath)
+);
+
+// React Router fallback
+app.get("/admin/{*splat}", (req, res) => {
+  res.sendFile(
+    path.join(adminPanelPath, "index.html")
+  );
+});
 
 
 app.use(errorHandler);

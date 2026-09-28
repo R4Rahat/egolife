@@ -16,7 +16,7 @@ export const getCurrentAdmin = async () => {
 };
 
 export const logoutAdmin = async () => {
-  const response = await api.post("/admin/logout");
+  const response = await api.post("/admins/logout");
 
   return response.data;
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FileText, Upload } from "lucide-react";
 
 import useNotificationStore from "../../store/notificationStore";
 
@@ -45,81 +46,91 @@ export default function NotificationForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-    >
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold text-slate-900">
-          Create Notification
-        </h2>
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Title */}
+      <div>
+        <label className="mb-2 block text-sm font-medium text-gray-700">
+          Notification title
+        </label>
 
-        <p className="mt-1 text-sm text-slate-500">
-          Upload a new notice with its PDF document.
-        </p>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Enter notification title"
+          required
+          className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-50"
+        />
       </div>
 
-      <div className="grid gap-5">
-        {/* Title */}
+      {/* Description */}
+      <div>
+        <label className="mb-2 block text-sm font-medium text-gray-700">
+          Description
+        </label>
 
-        <div>
-          <label className="mb-2 block text-sm font-medium text-slate-700">
-            Title
-          </label>
+        <textarea
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Enter a short description"
+          rows={4}
+          className="w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-50"
+        />
+      </div>
 
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Enter notification title"
-            required
-            className="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-          />
-        </div>
+      {/* PDF */}
+      <div>
+        <label className="mb-2 block text-sm font-medium text-gray-700">
+          PDF document
+          <span className="ml-1 text-red-500">*</span>
+        </label>
 
-        {/* Description */}
+        <label className="group flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 px-5 py-8 text-center transition hover:border-blue-300 hover:bg-blue-50/50">
+          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+            <FileText size={23} />
+          </div>
 
-        <div>
-          <label className="mb-2 block text-sm font-medium text-slate-700">
-            Description
-          </label>
+          {pdf ? (
+            <>
+              <p className="max-w-full truncate text-sm font-medium text-gray-800">
+                {pdf.name}
+              </p>
 
-          <textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Enter a short description"
-            rows={3}
-            className="w-full resize-none rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-          />
-        </div>
+              <p className="mt-1 text-xs text-green-600">
+                PDF selected successfully
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="text-sm font-medium text-gray-700">
+                Choose a PDF document
+              </p>
 
-        {/* PDF */}
-
-        <div>
-          <label className="mb-2 block text-sm font-medium text-slate-700">
-            PDF Document
-          </label>
+              <p className="mt-1 text-xs text-gray-400">
+                Click to browse your files
+              </p>
+            </>
+          )}
 
           <input
             type="file"
             accept="application/pdf"
             onChange={(e) => setPdf(e.target.files?.[0] || null)}
             required
-            className="block w-full cursor-pointer rounded-lg border border-slate-300 bg-slate-50 text-sm text-slate-600 file:mr-4 file:border-0 file:bg-slate-900 file:px-4 file:py-3 file:text-sm file:font-medium file:text-white"
+            className="hidden"
           />
-
-          {pdf && (
-            <p className="mt-2 text-xs text-slate-500">Selected: {pdf.name}</p>
-          )}
-        </div>
+        </label>
       </div>
 
-      <div className="mt-6 flex justify-end">
+      {/* Submit */}
+      <div className="flex justify-end border-t border-gray-100 pt-5">
         <button
           type="submit"
           disabled={submitting}
-          className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
         >
+          <Upload size={17} />
+
           {submitting ? "Uploading..." : "Publish Notification"}
         </button>
       </div>
