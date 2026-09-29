@@ -29,7 +29,7 @@ export const login = async (req, res, next) => {
 
     res.cookie("adminToken", token, {
       httpOnly: true,
-      secure: true,
+      secure: false,
       sameSite: "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
@@ -60,7 +60,7 @@ export const getMe = async (req, res) => {
 export const logout = (req, res) => {
   res.clearCookie("adminToken", {
     httpOnly: true,
-    secure: true,
+    secure: false,
     sameSite: "lax",
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
