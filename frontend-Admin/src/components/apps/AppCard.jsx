@@ -15,7 +15,7 @@ export default function AppCard({ app }) {
   const API = process.env.API;
 
   const handleDownload = (id) => {
-    window.location.href = `${API}/api/apps/${id}/download`;
+    window.location.href = `/api/apps/${id}/download`;
   };
 
   return (
