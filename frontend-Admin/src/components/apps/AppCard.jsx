@@ -12,8 +12,10 @@ export default function AppCard({ app }) {
     await removeApp(app._id);
   };
 
+  const API = process.env.API;
+
   const handleDownload = (id) => {
-    window.location.href = `http://localhost:5000/api/apps/${id}/download`;
+    window.location.href = `${API}/api/apps/${id}/download`;
   };
 
   return (
