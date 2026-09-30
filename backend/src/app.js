@@ -50,10 +50,8 @@ const landingPagePath = path.join(
 
 app.use(express.static(landingPagePath));
 
-app.get("/", (req, res) => {
-  res.sendFile(
-    path.join(landingPagePath, "index.html")
-  );
+app.get("/{*splat}", (req, res) => {
+  res.sendFile(path.join(landingPagePath, "index.html"));
 });
 
 
