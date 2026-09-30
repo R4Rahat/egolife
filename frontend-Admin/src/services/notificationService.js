@@ -25,9 +25,9 @@ export const deleteNotification = async (id) => {
 };
 
 export const getNotificationViewUrl = (id) => {
-  return `http://localhost:5000/api/notifications/${id}/view`;
+  return `/api/notifications/${id}/view`;
 };
 
 export const getNotificationDownloadUrl = (id) => {
-  return `http://localhost:5000/api/notifications/${id}/download`;
+  return `/api/notifications/${id}/download`;
 };
