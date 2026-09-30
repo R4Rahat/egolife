@@ -11,8 +11,6 @@ const navLinks = [
   { to: "/notifications", label: "Notifications" },
   { to: "/apps", label: "Apps" },
   { to: "/partner", label: "Partner" },
-  { to: "/industries", label: "Industries" },
-  { to: "/case-studies", label: "Case Studies" },
   { to: "/careers", label: "Careers" },
   { to: "/contact", label: "Contact" },
 ];
