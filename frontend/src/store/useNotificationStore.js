@@ -237,4 +237,5 @@ export const useNotificationStore = create((set, get) => ({
 
   clearError: () => set({ error: null }),
   resetCurrentNotification: () => set({ currentNotification: null }),
+  getViewUrl: (id) => `${getApiUrl()}/${id}/view`,
 }));

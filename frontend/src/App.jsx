@@ -40,14 +40,8 @@ export default function App() {
             path="/partner"
             element={<PagePlaceholder title="Become a Partner" />}
           />
-          <Route
-            path="/industries"
-            element={<PagePlaceholder title="Industries" />}
-          />
-          <Route
-            path="/case-studies"
-            element={<PagePlaceholder title="Case Studies" />}
-          />
+
+
           <Route
             path="/careers"
             element={<PagePlaceholder title="Careers" />}
