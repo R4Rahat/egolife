@@ -37,24 +37,6 @@ app.use("/api/apps", appsRoutes);
 
 app.use('/api/notifications', notificationRoutes);
 
-
-
-// =======================
-// Landing Page
-// =======================
-
-const landingPagePath = path.join(
-  __dirname,
-  "../../frontend/dist"
-);
-
-app.use(express.static(landingPagePath));
-
-app.get("/{*splat}", (req, res) => {
-  res.sendFile(path.join(landingPagePath, "index.html"));
-});
-
-
 // =======================
 // Admin Panel
 // =======================
@@ -76,6 +58,24 @@ app.get("/admin/{*splat}", (req, res) => {
     path.join(adminPanelPath, "index.html")
   );
 });
+
+// =======================
+// Landing Page
+// =======================
+
+const landingPagePath = path.join(
+  __dirname,
+  "../../frontend/dist"
+);
+
+app.use(express.static(landingPagePath));
+
+app.get("/{*splat}", (req, res) => {
+  res.sendFile(path.join(landingPagePath, "index.html"));
+});
+
+
+
 
 
 app.use(errorHandler);
