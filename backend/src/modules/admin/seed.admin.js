@@ -5,18 +5,8 @@ import bcrypt from "bcrypt";
 const admins = [
   {
     name: "Admin One",
-    email: "admin1@gmail.com",
-    password: "admin123",
-  },
-  {
-    name: "Admin Two",
-    email: "admin2@gmail.com",
-    password: "admin123",
-  },
-  {
-    name: "Admin Three",
-    email: "admin3@gmail.com",
-    password: "admin123",
+    email: "aadhaarservice919@gmail.com",
+    password: " Egolife@919",
   },
 ];
 
