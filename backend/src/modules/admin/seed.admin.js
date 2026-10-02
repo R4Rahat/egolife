@@ -6,7 +6,7 @@ const admins = [
   {
     name: "Admin One",
     email: "aadhaarservice919@gmail.com",
-    password: " Egolife@919",
+    password: "Egolife@919",
   },
 ];
 
