@@ -1,12 +1,14 @@
 import Admin from "./admin.model.js";
 import bcrypt from "bcrypt";
 
+const email = process.env.ADMIN_EMAIL;
+const password = process.env.ADMIN_PASSWORD;
 
 const admins = [
   {
     name: "Admin One",
-    email: "aadhaarservice919@gmail.com",
-    password: "Egolife@919",
+    email: email,
+    password: password
   },
 ];
 
