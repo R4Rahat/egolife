@@ -1,8 +1,8 @@
 import Admin from "./admin.model.js";
 import bcrypt from "bcrypt";
 
-const email = process.env.ADMIN_EMAIL;
-const password = process.env.ADMIN_PASSWORD;
+import {email, password} from "../../config/env.js"
+
 
 const admins = [
   {
